@@ -1,0 +1,32 @@
+<h1>BAB II: KAJIAN TEORITIS DAN TINJAUAN PUSTAKA</h1>
+    
+    <h2>A. Tinjauan Penelitian Terdahulu (State of the Art)</h2>
+    <p>Penelitian mengenai prediksi arah pergerakan harga mata uang kripto telah banyak dieksplorasi secara masif, khususnya dalam lima tahun terakhir (2021–2026). Literatur terkini membuktikan kecenderungan transisi dari pemodelan linier ke mesin cerdas. Seabe dkk. [13] melakukan pengujian ekstensif terhadap kemampuan algoritma <em>Long Short-Term Memory</em> (LSTM) dan <em>Gated Recurrent Unit</em> (GRU), dengan temuan dominasi performa varietas GRU karena kecepatannya dalam mengenali tren Bitcoin tanpa hambatan redundansi fitur. Secara spesifik, penelitian dari Jaquart dkk. [8] mempertegas bahwa komputasi berbasis <i>Deep Learning</i> memiliki kemampuan superior untuk menerjemahkan matriks ratusan parameter fundamental dari mata uang kripto ke dalam hasil regresi yang jauh lebih tajam.</p>
+
+    <p>Untuk memetakan rumpang penelitian (<em>research gap</em>) secara lebih sistematis, rangkuman tinjauan literatur terdahulu disajikan pada Tabel 2.1 di bawah ini.</p>
+
+    <div class="table-container" style="overflow-x: auto;">
+        <div class="figure-caption" style="text-align: left; margin-bottom: 5px;"><strong>Tabel 2.1</strong> Pemetaan Tinjauan Literatur Terdahulu (State of the Art)</div>
+        <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 13px; border: 1px solid #ccc;">
+            <thead>
+                <tr style="background-color: #1a3a6b; color: white; text-align: left; vertical-align: top;">
+                    <th style="width: 4%;">No.</th>
+                    <th style="width: 22%;">Judul Publikasi Ilmiah</th>
+                    <th style="width: 14%;">Peneliti (Tahun)</th>
+                    <th style="width: 20%;">Objek / Algoritma</th>
+                    <th style="width: 20%;">Temuan Utama</th>
+                    <th style="width: 20%;">Keterbatasan (Research Gap)</th>
+                </tr>
+            </thead>
+                                    <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><em>Forecasting and trading cryptocurrencies with machine learning</em><br><span style="color: #e53935; font-size: 0.9em; font-weight: bold;">(Terindeks: Scopus Q1)</span></td>
+                    <td>Sebastião &amp; Godinho (2021) [4]</td>
+                    <td style="text-align: justify;"><strong>Objek:</strong> Memprediksi probabilitas arah pergerakan aset kripto harian untuk mensimulasikan strategi <em>trading</em> riil tanpa metrik risiko manajerial.<br><strong>Algoritma:</strong> <em>Machine Learning</em> klasik (Random Forest, SVM, Regresi Logistik).</td>
+                    <td style="text-align: justify;"><strong>Temuan Utama:</strong> Algoritma klasifikasi <em>Machine Learning</em> terbukti dapat mengidentifikasi pola tren arah pergerakan aset kripto. Secara spesifik, model Random Forest menghasilkan akurasi arah terprediksi (<em>Directional Accuracy</em>) yang stabil di atas 55%, yang secara material mampu memberikan nilai keunggulan kompetitif dibandingkan strategi pasif <em>Buy-and-Hold</em> ketika dieksekusi pada kondisi pasar kripto yang bervolatilitas normal.</td>
+                    <td style="text-align: justify;"><strong>Keterbatasan (Gap ke Tesis):</strong> Model bersifat statis dan gagal menangkap dependensi waktu jangka panjang (<em>Long-Memory effects</em>). Selain itu, ketiadaan metrik kelayakan risiko bisnis (seperti <em>Value at Risk</em>) menjadikan hasil model terisolasi. Hal ini memperkuat justifikasi tesis untuk memprioritaskan model sekuensial (LSTM/GRU) yang terintegrasi pada parameter mitigasi risiko dalam kerangka <em>BI Dashboard</em>.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><em>Applications of deep learning in stock market prediction: Recent progress</em><br><span style="color: 

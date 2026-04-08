@@ -1,0 +1,47 @@
+Sistematika Penulisan</h2>
+    <p>Proposal tesis ini disusun dalam enam bab yang saling berkesinambungan. Setiap bab memiliki peran
+        spesifik dalam membangun argumentasi penelitian secara logis dan sistematis:</p>
+    <div class="sistematika-item">
+        <strong>BAB I &ndash; PENDAHULUAN</strong> membangun fondasi argumentasi penelitian secara menyeluruh.
+        Bab ini menjelaskan mengapa Bitcoin menjadi objek penelitian yang relevan (Latar Belakang),
+        apa saja permasalahan yang belum terjawab (Identifikasi dan Rumusan Masalah), apa yang ingin
+        dicapai (Tujuan), apa manfaatnya (Manfaat), hipotesis apa yang diajukan, serta di mana batas
+        cakupan penelitian ini (Batasan).
+    </div>
+    <div class="sistematika-item">
+        <strong>BAB II &ndash; KAJIAN TEORITIS DAN TINJAUAN PUSTAKA</strong> menyajikan fondasi teori
+        yang menopang seluruh metodologi penelitian. Pembahasan mencakup tinjauan kritis terhadap
+        keterbatasan model tradisional (ARIMA, GARCH), evolusi arsitektur <em>Deep Learning</em> berbasis
+        gerbang memori (LSTM dan GRU), konsep <em>Efficient Market Hypothesis</em>, prinsip-prinsip Big
+        Data 5V dalam konteks aset digital, serta pemetaan celah penelitian (<em>research gap</em>) yang
+        diisi oleh studi ini.
+    </div>
+    <div class="sistematika-item">
+        <strong>BAB III &ndash; ARSITEKTUR SISTEM DAN METODOLOGI BI FRAMEWORK</strong> menguraikan
+        rancangan teknis lengkap dari kerangka kerja BI empat lapis yang diusulkan, mencakup: (1) akuisisi
+        dan ingesti data dari Binance API, (2) proses ETL dan normalisasi data, (3) rekayasa fitur teknikal
+        dan komputasi model prediktif (LSTM, GRU, XGBoost), serta (4) lapisan analitik BI dan
+        penyajian hasil pada <em>Decision Support Dashboard</em>.
+    </div>
+    <div class="sistematika-item">
+        <strong>BAB IV &ndash; REKAYASA FITUR DAN OPTIMASI MODEL</strong> membahas secara mendalam
+        proses rekayasa 15 fitur teknikal, formulasi matematika dari setiap indikator (MACD, RSI, Bollinger
+        Bands, Rolling Volatility), strategi optimasi hiperparameter melalui <em>Grid Search
+        Cross-Validation</em>, serta evaluasi kontribusi setiap fitur menggunakan metode SHAP
+        (<em>Explainable AI</em>).
+    </div>
+    <div class="sistematika-item">
+        <strong>BAB V &ndash; RENCANA PENGUJIAN DAN EVALUASI MODEL</strong> menguraikan skema pengujian
+        empiris menggunakan <em>Walk-Forward Validation</em>. Bab ini membahas rencana perbandingan metrik
+        performa teknis (RMSE, MAE, MAPE) antar model, analisis residual, dan transformasi keluaran
+        prediktif ke dalam metrik risiko bisnis (<em>Win Rate</em>, <em>Sharpe Ratio</em>, VaR). Secara
+        khusus, bab ini menginvestigasi <em>tradeoff</em> fundamental antara GRU dan LSTM dalam konteks
+        pengambilan keputusan investasi nyata.
+    </div>
+    <div class="sistematika-item">
+        <strong>BAB VI &ndash; KESIMPULAN DAN REKOMENDASI</strong> merangkum kontribusi ilmiah dan
+        praktis utama penelitian, menjawab seluruh rumusan masalah berdasarkan hasil eksperimen, serta
+        mengajukan arah penelitian lanjutan yang dapat mengembangkan kerangka kerja ini lebih jauh.
+    </div>
+    <div class="sistematika-item">
+        <strong>DAFTAR PUSTAKA

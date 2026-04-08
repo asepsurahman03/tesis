@@ -1,0 +1,28 @@
+Sistematika Penulisan</h2>
+    <p>Proposal tesis ini disusun dalam enam bab yang saling berkesinambungan. Setiap bab memiliki peran
+        spesifik dalam membangun argumentasi penelitian secara logis dan sistematis:</p>
+    <div class="sistematika-item">
+        <strong>BAB I &ndash; PENDAHULUAN</strong> membangun fondasi argumentasi penelitian secara menyeluruh.
+        Bab ini menjelaskan mengapa Bitcoin menjadi objek penelitian yang relevan (Latar Belakang),
+        apa saja permasalahan yang belum terjawab (Identifikasi dan Rumusan Masalah), apa yang ingin
+        dicapai (Tujuan), apa manfaatnya (Manfaat), hipotesis apa yang diajukan, serta di mana batas
+        cakupan penelitian ini (Batasan).
+    </div>
+    <div class="sistematika-item">
+        <strong>BAB II &ndash; KAJIAN TEORITIS DAN TINJAUAN PUSTAKA</strong> menyajikan fondasi teori
+        yang menopang seluruh metodologi penelitian. Pembahasan mencakup tinjauan kritis terhadap
+        keterbatasan model tradisional (ARIMA, GARCH), evolusi arsitektur <em>Deep Learning</em> berbasis
+        gerbang memori (LSTM dan GRU), konsep <em>Efficient Market Hypothesis</em>, prinsip-prinsip Big
+        Data 5V dalam konteks aset digital, serta pemetaan celah penelitian (<em>research gap</em>) yang
+        diisi oleh studi ini.
+    </div>
+    <div class="sistematika-item">
+        <strong>BAB III &ndash; ARSITEKTUR SISTEM DAN METODOLOGI BI FRAMEWORK</strong> menguraikan
+        rancangan teknis lengkap dari kerangka kerja BI empat lapis yang diusulkan, mencakup: (1) akuisisi
+        dan ingesti data dari Binance API, (2) proses ETL dan normalisasi data, (3) rekayasa fitur teknikal
+        dan komputasi model prediktif (LSTM, GRU, XGBoost), serta (4) lapisan analitik BI dan
+        penyajian hasil pada <em>Decision Support Dashboard</em>.
+    </div>
+    <div class="sistematika-item">
+        <strong>BAB IV &ndash; REKAYASA FITUR DAN OPTIMASI MODEL</strong> membahas secara mendalam
+        proses rekayasa 15 fitur 

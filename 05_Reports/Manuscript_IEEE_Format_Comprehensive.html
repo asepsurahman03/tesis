@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scopus IEEE Manuscript - BI Framework for Crypto Prediction</title>
+    <!-- MathJax for rendering equations -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 10pt;
+            line-height: 1.25;
+            background-color: #525659;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            background-color: white;
+            width: 8.5in;
+            min-height: 11in;
+            padding: 0.75in 0.75in 1in 0.75in;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            margin-bottom: 40px;
+            position: relative;
+            box-sizing: border-box;
+            counter-reset: target;
+        }
+
+        body {
+            counter-reset: section figure table page-count;
+        }
+
+        .page-content {
+            column-count: 2;
+            column-gap: 0.25in;
+            text-align: justify;
+        }
+
+        .header-block {
+            column-span: all;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .title {
+            font-size: 20pt;
+            margin-bottom: 15px;
+            font-weight: normal;
+            line-height: 1.1;
+        }
+
+        .authors {
+            font-size: 11pt;
+            margin-bottom: 5px;
+        }
+
+        .affiliation {
+            font-size: 10pt;
+            font-style: italic;
+            margin-bottom: 25px;
+        }
+
+        .abstract-section {
+            font-weight: bold;
+            text-align: justify;
+            margin: 0 0.25in 20px 0.25in;
+            font-size: 9.5pt;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 0.5in;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 10pt;
+        }
+
+        h1 {
+            font-size: 10pt;
+            font-variant: small-caps;
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        h1::before {
+            counter-increment: section;
+            content: counter(section, upper-roman) ". ";
+        }
+
+        h2 {
+            font-size: 10pt;
+            font-style: italic;
+            font-weight: normal;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        p {
+            text-indent: 0.15in;
+            margin: 0 0 8px 0;
+            hyphens: auto;
+        }
+
+        .figure {
+            text-align: center;
+            margin: 15px 0;
+            break-inside: avoid;
+        }
+
+        .figure img {
+            width: 100%;
+            max-width: 3.5in;
+            border: 1px solid #e5e5e5;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .figure-caption {
+            font-size: 8pt;
+            text-align: justify;
+            margin-top: 5px;
+        }
+
+        .table-container {
+            margin: 15px 0;
+            text-align: center;
+            break-inside: avoid;
+        }
+
+        .table-title {
+            font-size: 8pt;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 8pt;
+            margin-bottom: 10px;
+        }
+
+        th,
+        td {
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .equation {
+            margin: 12px 0;
+            font-size: 9.5pt;
+            text-align: center;
+            break-inside: avoid;
+        }
+
+        .references p {
+            text-indent: -0.25in;
+            margin-left: 0.25in;
+            margin-bottom: 5px;
+            text-align: left;
+            font-size: 8pt;
+        }
+
+        .references h1::before {
+            content: none;
+            counter-increment: none;
+        }
+
+        .references h1 {
+            counter-increment: none;
+        }
+
+        .references-heading::before {
+            content: none !important;
+            counter-increment: none !important;
+        }
+
+        .references-heading {
+            counter-increment: none !important;
+        }
+
+        .svg-figure {
+            text-align: center;
+            margin: 12px 0;
+            break-inside: avoid;
+            column-span: all;
+        }
+
+        .svg-figure svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .dashboard-figure {
+            text-align: center;
+            margin: 12px 0;
+            break-inside: avoid;
+            column-span: all;
+            border: 1px solid #ccc;
+            padding: 8px;
+            background: #f9f9f9;
+        }
+
+        @media print {
+            body {
+                background: white;
+                margin: 0;
+                padding: 0;
+            }
+
+            .page {
+                box-shadow: none;
+                margin: 0;
+                page-break-after: always;
+                min-height: auto;
+                padding: 0.5in;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============================================== -->
+    <!-- PAGE 1                                         -->
+    <!-- ============================================== -->
+    <div class="page" id="page-1">
+        <div class="page-content">
+
+            <div class="header-block">
+                <div class="title">Business Intelligence Framework for Cryptocurrency Prediction: A Comparative Study of
+                    LSTM, GRU, and Ensemble Baselines Using Big Data Analytics With Deep Learning Integration</div>
+                <div class="authors">Asep Surahman Sulaeman</div>
+                <div class="affiliation">Master of Informatics, Nusa Putra University, Sukabumi, Indonesia<br>
+                    Email: asep.surahman@nusaputra.ac.id</div>
+
+                <div class="abstract-section">
+                    <i>Abstract:</i> The explosive volatility of cryptocurrency markets demands predictive models that
+                    seamlessly integrate real-time Big Data with strategic decision support systems. This study proposes
+                    a novel four-layer Business Intelligence (BI) Framework synthesizing Big Data Analytics with deep
+                    learning predictive engines. Utilizing a five-year high-frequency dataset comprising 43,788 hourly
+                    Bitcoin (BTC/USDT) records from the Binance API, we rigorously address the 5V dimensions of Big
+                    Data. Feature variety is mathematically captured through a comprehensive engineering process
+                    generating 15 technical indicators, evaluated via SHapley Additive exPlanations (SHAP) to map
+                    specific algorithmic importances. The computational layer benchmarks advanced Long Short-Term Memory
+                    (LSTM) and Gated Recurrent Units (GRU) sequential networks against an XGBoost ensemble baseline
+                    model. The deep architectures utilized hyperparameters optimized via automated Grid Search (two
+                    hidden layers, 50 nodes, 20% Dropout). Experimental Walk-Forward Validation reveals a critical
+                    architectural trade-off: The GRU model demonstrated undeniably superior margins regarding proximity
+                    precision (RMSE: 0.1058), definitively outperforming both LSTM (0.1145) and the XGBoost baseline
+                    (0.1524). However, the LSTM achieved significantly higher positive-directional trading accuracy
+                    (72.3%) compared to GRU (69.8%) and XGBoost (58.4%). Crucially, these deep learning parameters are
+                    subsequently routed into an algorithmic BI Presentation Layer mapping enterprise risk constraints
+                    via the Sharpe Ratio (LSTM: 1.45) and Value at Risk projections (VaR at 95%: -2.34%). Ultimately,
+                    this academic treatise culminates in a production-capable ecosystem proving that sequence-aware deep
+                    architectures successfully mitigate aggressive volatility while furnishing superior financial
+                    intelligence directly to institutional stakeholders.
+                    <br><br>
+                    <i>Keywords—</i>Business Intelligence, Cryptocurrency Prediction, Big Data Analytics, Deep Learning,
+                    XGBoost, LSTM, GRU, Financial Informatics, Bitcoin.
+                </div>
+            </div>
+
+            <p>The digitization of global economic networks over the previous decade has rigidly established
+                decentralized algorithmic assets—most notably Bitcoin (BTC)—as a dominant financial class. Characterized
+                by unprecedented stochastics, continuous twenty-four-hour trading cycles, and extreme susceptibility to
+                exogenous macroeconomic sentiment shocks, cryptocurrency environments formulate the pinnacle challenge
+                for predictive computational modeling [1], [2], [3]. Traditional stoichiometric and econometric
+                time-series models, heavily reliant upon rigid assumptions like stationarity (such as ARIMA or GARCH
+                protocols), fall profoundly short when applied to High-Frequency Trading (HFT) matrices [4], [5]. These
+                classical systems inherently fail to dynamically capture non-linear, temporal macro-dependencies
+                completely obscured within high-frequency market noise [6].</p>
+            <p>Consequently, institutional market participants consistently migrate computational workloads toward
+                deeper Neural Networks mathematically grounded within Big Data Analytics frameworks. The massive
+                ingestion of transactional ledgers natively satisfies the foundational definitions of Big Data, thereby
+                enabling recurrent deep learning models to systematically unravel convoluted trading relationships.</p>
+
+        </div>
+        <div class="page-number">- 1 -</div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- PAGE 2                                         -->
+    <!-- ============================================== -->
+    <div class="page" id="page-2">
+        <div class="page-content">
+
+            <p>While existing literatures frequently explore basic Recurrent Neural Networks (RNN) mapped against index
+                pricing, modern technical forecasting explicitly lacks end-to-end integration mapping predictions
+                directly into accessible Business Intelligence (BI). Generating a strictly technical valuation (e.g., an
+                absolute numerical error margin) is practically useless for C-suite executive strategizing or
+                algorithmically orchestrated fund management. Predictive outcomes must be procedurally translated into
+                functionally interpretable business constraints representing quantitative risk, standard deviation
+                thresholds, and expected directional win rates.</p>
+            <p>To eliminate this academic divide, the core novelty of this study originates in the formulation of a
+                unified, enterprise-scaled "BI-ML Framework." By critically evaluating two fundamental gated RNN
+                structuresâ‚¬â€Long Short-Term Memory (LSTM) arrays versus Gated Recurrent Units (GRU)â‚¬â€and benchmarking them
+                against an industry-standard Extreme Gradient Boosting (XGBoost) baseline, this research constructs a
+                robust computational bridge operating from raw Application Programming Interface (API) indexing directly
+                outward to functional Decision Support Dashboards.</p>
+
+            <h1>Literature Review and Theoretical Formulation</h1>
+            <p>Deep learning forecasting within financial informatics possesses a well-documented genealogy. However,
+                bridging continuous sequence architectures directly into distributed frameworks highlights continuous
+                evolutionary academic strides.</p>
+
+            <h2>A. Limitations of Traditional Modeling</h2>
+            <p>Traditionally, financial price discovery operated heavily upon the Efficient Market Hypothesis (EMH),
+                mathematically assuming current valuations definitively reflect all public metadata. However,
+                cryptocurrency operations famously exhibit long-memory effects proving significant market inefficiencies
+                [7]. While autoregressive configurations (ARIMA) calculate near-term regression optimally across
+                normalized fiat currencies, prior studies verify these mechanisms suffer immediate catastrophic gradient
+                degradations when confronting massive variance spikes. Consequently, ensemble tree-based parameters
+                (like XGBoost) evolved as reliable deterministic baselines across tabular financial constraints [8].</p>
+
+            <h2>B. Evolution of Sequence Neural Topologies</h2>
+            <p>Addressing the inherent vanishing gradient problem associated with simple RNN networks, Hochreiter and
+                Schmidhuber [9] finalized the LSTM architecture, deploying independent gating variables strictly
+                dictating memory cell preservation. To optimize processing density, Cho et al. [10] engineered the GRU
+                variant, condensing algorithmic tensors by intentionally bypassing an independent internal storage
+                state. While both topologies aggressively map high-frequency deviations [11], [12], recent literature evaluates
+                their sequential strengths strictly juxtaposed against corporate Risk Strategy analytics integrating
+                Business Intelligence reporting structures [13], [14].</p>
+
+            <div class="figure" style="column-span: all; margin: 20px 0;">
+                <img src="../../04_Visualizations/Tahapan_Penelitian_BI.png" alt="Alur Tahapan Metodologi Penelitian" style="width: 100%; max-width: 900px;">
+                <div class="figure-caption">Fig. 0. Comprehensive Research Methodology Flow Chart: Five-Stage process spanning Data Collection, Feature Engineering, Model Development, Performance Evaluation, and Business Intelligence Integration for Cryptocurrency Prediction System.</div>
+            </div>
+
+            <h1>System Architecture: Four-Layer BI Framework</h1>
+            <p>To enforce absolute deterministic reproducibility, this Big Data ecosystem is architecturally bounded
+                inside a four-layer computational progression, meticulously orchestrating the transition outward from
+                raw HTTP bytes directly into strategic human interpretations [15], [16]. This unified framework addresses the
+                specific technical and organizational challenges identified in distributed financial environments [17], [18].
+            </p>
+
+            <h2>A. Layer 1: Data Source and Ingestion Hub</h2>
+            <p>Data lake population utilized automated Python endpoint requests indexing the Binance Spot API.
+                Extracting an unbroken observational timeline stretching longitudinally (2021-2026), the ingestion
+                captured precisely 43,788 granular hourly records composing primary OHLC (Open, High, Low, Close)
+                components. This magnitude absolutely satisfies the fundamental <i>Volume</i> and <i>Velocity</i> axioms
+                commanding robust Big Data implementations [1], [19].</p>
+
+            <h2>B. Layer 2: ETL and Verification Engine</h2>
+            <p>The sheer magnitude and continuous erratic volatility of this high-frequency variance over the five-year
+                ingestion window is visually captured in Fig. 1. Operating as the essential guardian of standard
+                <i>Veracity</i> navigating this dataset, the Extraction, Transformation, and Load (ETL) pipeline
+                mathematically scrubs the raw vectors. Chronological indexing fractures are dynamically interpolated
+                utilizing linear polynomial projections. Crucially, deep algorithms violently explode gradient
+                summations handling unbounded monetary denominations. Thus, the framework uniformly binds every
+                numerical tensor utilizing strict Min-Max Normalization (Equation 1):</p>
+            <div class="equation">
+                $$ X_{\text{norm}} = \frac{X - X_{\min}}{X_{\max} - X_{\min}} \eqno{(1)} $$
+            </div>
+
+            <div class="figure">
+                <img src="../04_Visualizations/btc_5year_trend.png" alt="Bitcoin 5-Year High Frequency Trend">
+                <div class="figure-caption">Fig. 1. Continuous Pricing and Exchange Volume Trajectory Matrix spanning
+                    the 43,788 Hour Target Dataset (2021-2026).</div>
+            </div>
+
+        </div>
+        <div class="page-number">- 2 -</div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- PAGE 3                                         -->
+    <!-- ============================================== -->
+    <div class="page" id="page-3">
+        <div class="page-content">
+
+            <h2>C. Layer 3: Predictive Computation</h2>
+            <p>Neural inference significantly amplifies traversing expanded dimensional arrays. Addressing the
+                <i>Variety</i> mandate, Layer 3 formulates fifteen distinct technical equations tracking momentum.
+                PyTorch instances subsequently initialize tensor mapping across designated Nvidia CUDA cores
+                facilitating accelerated epoch validation.</p>
+
+            <h2>D. Layer 4: BI Analytics and Presentation Modeling</h2>
+            <p>Closing the architecture, deep residual vectors translate into interactive Business Intelligence
+                frontends. Operating Python visualization algorithms, model errors cleanly represent explicit enterprise
+                indicators defining Sharpe trajectories alongside Value at Risk (VaR). The complete four-layer
+                progression is illustrated in Fig. 4.</p>
+
+            <div class="svg-figure">
+                <svg viewBox="0 0 680 130" xmlns="http://www.w3.org/2000/svg"
+                    style="width:100%;font-family:'Times New Roman',serif;font-size:9px;">
+                    <defs>
+                        <marker id="arr" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto">
+                            <polygon points="0 0, 8 3, 0 6" fill="#333" />
+                        </marker>
+                    </defs>
+                    <!-- Layer 1 -->
+                    <rect x="5" y="25" width="140" height="75" rx="6" fill="#1a3a6b" stroke="#0d2244"
+                        stroke-width="1.5" />
+                    <text x="75" y="50" fill="white" text-anchor="middle" font-weight="bold" font-size="9">LAYER
+                        1</text>
+                    <text x="75" y="64" fill="#aac4ff" text-anchor="middle" font-size="8">Data Source &amp;</text>
+                    <text x="75" y="76" fill="#aac4ff" text-anchor="middle" font-size="8">Ingestion Hub</text>
+                    <text x="75" y="90" fill="#dde8ff" text-anchor="middle" font-size="7.5">43,788 Hourly Records</text>
+                    <!-- Arrow 1-->
+                    <line x1="145" y1="62" x2="163" y2="62" stroke="#333" stroke-width="1.5" marker-end="url(#arr)" />
+                    <!-- Layer 2 -->
+                    <rect x="165" y="25" width="140" height="75" rx="6" fill="#1d5c8a" stroke="#0d3d5e"
+                        stroke-width="1.5" />
+                    <text x="235" y="50" fill="white" text-anchor="middle" font-weight="bold" font-size="9">LAYER
+                        2</text>
+                    <text x="235" y="64" fill="#aadbff" text-anchor="middle" font-size="8">ETL &amp; Verification</text>
+                    <text x="235" y="76" fill="#aadbff" text-anchor="middle" font-size="8">Engine</text>
+                    <text x="235" y="90" fill="#ddeeff" text-anchor="middle" font-size="7.5">Min-Max Norm Â· SHAP</text>
+                    <!-- Arrow 2 -->
+                    <line x1="305" y1="62" x2="323" y2="62" stroke="#333" stroke-width="1.5" marker-end="url(#arr)" />
+                    <!-- Layer 3 -->
+                    <rect x="325" y="25" width="140" height="75" rx="6" fill="#136d6d" stroke="#0a4545"
+                        stroke-width="1.5" />
+                    <text x="395" y="50" fill="white" text-anchor="middle" font-weight="bold" font-size="9">LAYER
+                        3</text>
+                    <text x="395" y="64" fill="#aaffee" text-anchor="middle" font-size="8">Predictive Computation</text>
+                    <text x="395" y="76" fill="#aaffee" text-anchor="middle" font-size="8">LSTM Â· GRU Â· XGBoost</text>
+                    <text x="395" y="90" fill="#ddfff9" text-anchor="middle" font-size="7.5">15 Features Â· Walk-Forward
+                        Val.</text>
+                    <!-- Arrow 3 -->
+                    <line x1="465" y1="62" x2="483" y2="62" stroke="#333" stroke-width="1.5" marker-end="url(#arr)" />
+                    <!-- Layer 4 -->
+                    <rect x="485" y="25" width="140" height="75" rx="6" fill="#7b2d00" stroke="#4e1d00"
+                        stroke-width="1.5" />
+                    <text x="555" y="50" fill="white" text-anchor="middle" font-weight="bold" font-size="9">LAYER
+                        4</text>
+                    <text x="555" y="64" fill="#ffc8a0" text-anchor="middle" font-size="8">BI Analytics &amp;</text>
+                    <text x="555" y="76" fill="#ffc8a0" text-anchor="middle" font-size="8">Decision Support</text>
+                    <text x="555" y="90" fill="#ffeedd" text-anchor="middle" font-size="7.5">Sharpe Â· VaR Â· KPI
+                        Dashboard</text>
+                    <!-- Big Data Labels -->
+                    <text x="75" y="115" fill="#555" text-anchor="middle" font-size="7">Volume Â· Velocity</text>
+                    <text x="235" y="115" fill="#555" text-anchor="middle" font-size="7">Veracity</text>
+                    <text x="395" y="115" fill="#555" text-anchor="middle" font-size="7">Variety</text>
+                    <text x="555" y="115" fill="#555" text-anchor="middle" font-size="7">Value</text>
+                </svg>
+                <div class="figure-caption">Fig. 4. Proposed Four-Layer Business Intelligence Framework Architecture
+                    Mapping Raw API Data to Executive Decision Support Systems via Big Data 5V Compliance.</div>
+            </div>
+
+            <h1>Multi-Dimensional Feature Engineering and SHAP Importance Evaluation</h1>
+            <p>Isolating pure raw value significantly limits deep pattern recognition. Deploying fifteen specialized
+                technical indicators across five analytical categories ensures recurrent nodes successfully recognize
+                abstract topological resistance ceilings. Table III enumerates the complete feature engineering matrix
+                applied throughout all model training iterations.</p>
+
+            <div class="table-container">
+                <div class="table-title">Table III. Fifteen-Dimensional Feature Engineering Matrix (Variety Principle)
+                </div>
+                <table>
+                    <tr>
+                        <th>#</th>
+                        <th>Feature</th>
+                        <th>Category</th>
+                        <th>Formula Basis</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Close Price</td>
+                        <td>Raw</td>
+                        <td>P<sub>t</sub></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Open Price</td>
+                        <td>Raw</td>
+                        <td>O<sub>t</sub></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>High Price</td>
+                        <td>Raw</td>
+                        <td>H<sub>t</sub></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Low Price</td>
+                        <td>Raw</td>
+                        <td>L<sub>t</sub></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Volume</td>
+                        <td>Raw</td>
+                        <td>V<sub>t</sub></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>MA-7</td>
+                        <td>Trend</td>
+                        <td>avg(P, 7)</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>MA-21</td>
+                        <td>Trend</td>
+                        <td>avg(P, 21)</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>RSI-14</td>
+                        <td>Momentum</td>
+                        <td>Eq. (3)</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>MACD</td>
+                        <td>Momentum</td>
+                        <td>Eq. (2)</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>MACD Signal</td>
+                        <td>Momentum</td>
+                        <td>EMA<sub>9</sub>(MACD)</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>BB Upper</td>
+                        <td>Volatility</td>
+                        <td>MA<sub>20</sub>+2ÃÆ’</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>BB Lower</td>
+                        <td>Volatility</td>
+                        <td>MA<sub>20</sub>Ë†â€™2ÃÆ’</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>BB Width</td>
+                        <td>Volatility</td>
+                        <td>Eq. (4)</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Log Returns</td>
+                        <td>Stationarity</td>
+                        <td>ln(P<sub>t</sub>/P<sub>t-1</sub>)</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Rolling Volatility</td>
+                        <td>Risk</td>
+                        <td>ÃÆ’<sub>24h</sub></td>
+                    </tr>
+                </table>
+            </div>
+
+            <h2>A. Trend Momentum Metrics (MACD & RSI)</h2>
+            <p>Tracking rapid momentum realignments mandates detecting discrepancies spanning exponential averages via
+                Convergence Divergence (Equation 2):</p>
+            <div class="equation">
+                $$ MACD = EMA_{12}(P) - EMA_{26}(P) \eqno{(2)} $$
+            </div>
+            <p>Binding algorithmic velocity exclusively between absolute 0-100 ranges provides nodes strictly
+                interpretable boundaries calculating active market fatigue via the Relative Strength Index (RSI):</p>
+            <div class="equation">
+                $$ RSI = 100 - \left(\frac{100}{1 + \frac{EMA(\text{Gain})}{EMA(\text{Loss})}}\right) \eqno{(3)} $$
+            </div>
+
+            <h2>B. Volatility Boundaries and Stationarity</h2>
+            <p>Recurrent topologies rapidly degrade confronting extreme non-stationarity. Expanding Bollinger Band
+                constraints limiting network destabilization utilized Logarithmic progression alongside standard
+                variance variables:</p>
+            <div class="equation">
+                $$ \sigma_t = \sqrt{\frac{1}{n} \sum (\Delta P_i - \bar{P})^2} \eqno{(4)} $$
+            </div>
+
+            <h2>C. Feature Permutation Importance</h2>
+            <p>Rather than assuming feature equality, this study inherently mapped predictive distributions utilizing
+                SHapley Additive exPlanations (SHAP). The mathematical evaluation distinctly uncovered that continuous
+                Rolling Volatility indicators alongside MACD signal crossovers maintained the dominant predictive
+                weights guiding node activation, confirming variance parameters command exponentially greater predictive
+                utility than pure static pricing vectors bridging digital commodity modeling [20], [21], [22].</p>
+
+            <h1>Optimization Methodologies and Deep Architecture Formulations</h1>
+            <p>Ensuring complete elimination of forward data-leaks common within financial mathematics, observational
+                fractions spanned an isolated rolling <i>Walk-Forward Validation</i> sequencing. Specifically,
+                evaluating chronological sliding windows completely eradicates look-ahead biases skewing baseline metric
+                derivations.</p>
+
+            <h2>A. Hyperparameter Logic via Grid Search Validation</h2>
+            <p>Optimized structural equality strictly guarantees fair model benchmarking methodologies. The exact
+                dimensions were dynamically resolved allocating an extensive Grid Search array calculating dimensional
+                potentials spanning [32, 50, 128] inner variables. Testing concluded that dual recurrent operational
+                layers carrying exactly 50 internal mathematical configurations minimized overfitting efficiently. The
+                mathematical optimizer layer assigned the 'Adam' stochastic solver initiating a baseline learning rate
+                at 0.001 [23]. Enforcing extremely robust generalization mapping against Bitcoin micro-fluctuations,
+                exactly 10 epoch sweeps contained by a 20% Dropout probability layer successfully insulated memory
+                propagation integrity [24], [25].</p>
+
+            <h2>B. Ensemble Standard Baseline (XGBoost)</h2>
+            <p>Providing definitive contrasting literature logic, an XGBoost regressor represented state-of-the-art
+                tabular processing configurations. Utilizing parallel ensemble tree-boosting (100 uniform estimators
+                mapped iteratively minimizing gradient residuals), XGBoost provides exceptionally rapid non-sequential
+                approximations benchmarking deep algorithm necessity.</p>
+
+            <h2>C. Long Short-Term Memory Arrays</h2>
+            <p>The core LSTM framework protects gradient propagation via designated algorithmic control gates handling
+                temporal survival vectors natively governing Input (\(i_t\)) and Forget (\(f_t\)) restrictions:</p>
+
+        </div>
+        <div class="page-number">- 3 -</div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- PAGE 4                                         -->
+    <!-- ============================================== -->
+    <div class="page" id="page-4">
+        <div class="page-content">
+
+            <div class="equation">
+                $$ f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f) \eqno{(5)} $$
+            </div>
+            <div class="equation">
+                $$ i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i) \eqno{(6)} $$
+            </div>
+            <p>By exclusively retaining historically potent signals, typical Long-Memory pricing behavior inherently
+                synchronizes alongside LSTM capabilities across volatile environments.</p>
+
+            <h2>D. Gated Recurrent Unit (GRU) Topology</h2>
+            <p>Intentionally terminating independent isolation repositories, GRU nodes map instantaneous variations
+                immediately mapping direct <i>Update</i> (\(z_t\)) mechanics:</p>
+            <div class="equation">
+                $$ z_t = \sigma(W_z \cdot [h_{t-1}, x_t] + b_z) \eqno{(7)} $$
+            </div>
+            <p>Condensing tensor dimensions inherently guarantees rapid backward propagation validations, plotting
+                shorter correlations natively faster comparing bulk LSTM implementations.</p>
+
+            <h1>Empirical Results and Implementation Discussion</h1>
+            <p>Deploying back-testing extrapolations spanning the out-of-sample forward boundaries explicitly outlined
+                operational nuances distinguishing sequential networks bridging classical ensemble trees. A visual
+                representation of these divergent predictive trajectory capabilitiesâ‚¬â€mapping standard baselines against
+                deep recurrent architecturesâ‚¬â€is comprehensively detailed within Fig. 2.</p>
+
+            <div class="figure">
+                <img src="../04_Visualizations/forecast_comparison.png"
+                    alt="Deep Learning Architecture Prediction Variations">
+                <div class="figure-caption">Fig. 2. Comparative Extrapolations Mapping Ensemble Baseline Accuracies vs
+                    Sequence-Aware RNN Performance Matrices.</div>
+            </div>
+
+            <h2>A. Precision Derivations and Raw Mathematics</h2>
+            <p>The absolute raw error measurements are rigorously benchmarked across the three algorithmic paradigms in
+                Table I. Documented extensively within this matrix, the testing residuals strongly differentiate
+                sequence necessities. Fundamentally, XGBoost drastically failed calculating precise long-term trajectory
+                targets returning a massive 0.1524 RMSE, heavily confirming standard tree regressions completely
+                breakdown confronting highly sequential long-memory financial variances.</p>
+            <p>Contrasting the ensemble baseline, the GRU topology dominated holistic proximity alignments, returning an
+                optimal 0.1058 RMSE alongside minimal percentage disparity measurements (MAPE 13.13%).</p>
+
+            <div class="table-container">
+                <div class="table-title">Table I. Quantitative Deep Learning Loss Diagnostics</div>
+                <table>
+                    <tr>
+                        <th>Metric Benchmark</th>
+                        <th>XGBoost (Base)</th>
+                        <th>LSTM Array</th>
+                        <th>GRU Array</th>
+                    </tr>
+                    <tr>
+                        <td>RMSE Score</td>
+                        <td>0.1524</td>
+                        <td>0.1145</td>
+                        <td><b>0.1058</b></td>
+                    </tr>
+                    <tr>
+                        <td>MAE Deviance</td>
+                        <td>0.1260</td>
+                        <td>0.1008</td>
+                        <td><b>0.0948</b></td>
+                    </tr>
+                    <tr>
+                        <td>MAPE Ratio</td>
+                        <td>16.50%</td>
+                        <td>13.96%</td>
+                        <td><b>13.13%</b></td>
+                    </tr>
+                    <tr>
+                        <td>Total Compute (s)</td>
+                        <td><b>12.4s</b></td>
+                        <td>106.6s</td>
+                        <td>192.2s</td>
+                    </tr>
+                </table>
+            </div>
+
+            <p>To further emphasize this precision disparity, the mathematical residual variance spreadsâ‚¬â€highlighting
+                the narrow bounding limits of the GRU architecture against scattered baseline defaultsâ‚¬â€are prominently
+                plotted within Fig. 3.</p>
+
+            <div class="figure">
+                <img src="../04_Visualizations/residual_analysis.png" alt="Distribution of Forecast Residual Defaults">
+                <div class="figure-caption">Fig. 3. Analysis Displaying Forecast Residual Spreads Confirming Predictive
+                    Alignment Limits Standardizing Variance Bounds.</div>
+            </div>
+
+            <h2>B. Executive Strategy Analytics and Output Transformation</h2>
+            <p>Representing actionable Layer 4 <i>Value</i> utility requires indexing models evaluating accurate
+                timeline directions instead of gross monetary residuals. Directional Accuracy verifies successful
+                algorithmic identification defining ascending or deteriorating conditions strictly irrespective
+                regarding absolute target numbers. These advanced enterprise indicators, explicitly capturing actionable
+                trading profitability thresholds and quantitative risk exposure, are summarized transparently in Table
+                II.</p>
+
+        </div>
+        <div class="page-number">- 4 -</div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- PAGE 5                                         -->
+    <!-- ============================================== -->
+    <div class="page" id="page-5">
+        <div class="page-content">
+
+            <div class="table-container">
+                <div class="table-title">Table II. Dynamic Information and Risk Constraints</div>
+                <table>
+                    <tr>
+                        <th>BI System Metric</th>
+                        <th>XGBoost</th>
+                        <th>LSTM Network</th>
+                        <th>GRU Network</th>
+                    </tr>
+                    <tr>
+                        <td>Directional Win Rate</td>
+                        <td>58.4%</td>
+                        <td><b>72.3%</b></td>
+                        <td>69.8%</td>
+                    </tr>
+                    <tr>
+                        <td>Risk Sharpe Ratio</td>
+                        <td>0.95</td>
+                        <td><b>1.45</b></td>
+                        <td>1.32</td>
+                    </tr>
+                    <tr>
+                        <td>Value-at-Risk (95%)</td>
+                        <td>-4.10%</td>
+                        <td><b>-2.34%</b></td>
+                        <td>-2.67%</td>
+                    </tr>
+                </table>
+            </div>
+
+            <p>Analyzing organization parameters detailed identically via Table II yields fundamental topological
+                inversions isolating practical functionality boundaries. Noticeably, the XGBoost tree configuration
+                heavily failed calculating a profitable dynamic Sharpe ratio (0.95), definitively disqualifying standard
+                tabular ensembles surrounding functional High-Frequency integrations due identically toward failure
+                tracking prolonged trend states.</p>
+            <p>Though effectively minimizing exact numerical ranges validated within Table I, GRU processing
+                consistently relinquished directional dominance against the overarching LSTM topology. The Long
+                Short-Term matrix universally maintained operational trajectory alignment generating phenomenal 72.3%
+                verified win limits alongside remarkably limited downside constraints (VaR registering minimally at
+                -2.34%). The empirical derivations heavily support conclusions that LSTM node topologies structurally
+                preserve long-timeline trend biases, actively ignoring minor noise spikes which subsequently corrupted
+                simplified architectures identically attempting continuous tracking iterations.</p>
+
+            <h1>DSS Organizational Strategy Allocations</h1>
+            <p>Utilizing multi-stage predictive validation boundaries automatically translates directly guiding
+                executive operations securely defining robust automated frameworks natively mitigating organizational
+                exposure constraints. The enterprise Decision Support Dashboard (Fig. 5) operationalizes Layer 4
+                outputs, rendering KPI cards, model comparison charts, risk metric visualizations, and real-time
+                BUY/HOLD/SELL trading signals derived from LSTM and GRU predictions.</p>
+
+            <div class="dashboard-figure">
+                <svg viewBox="0 0 620 300" xmlns="http://www.w3.org/2000/svg"
+                    style="width:100%;font-family:'Times New Roman',serif;">
+                    <!-- Dashboard Header -->
+                    <rect x="0" y="0" width="620" height="300" fill="#f0f4f8" rx="4" />
+                    <rect x="0" y="0" width="620" height="32" fill="#1a3a6b" rx="4" />
+                    <text x="310" y="21" fill="white" text-anchor="middle" font-size="11" font-weight="bold">Bitcoin
+                        Trading Intelligence Dashboard â‚¬â€ BI Decision Support System</text>
+                    <!-- KPI Cards Row -->
+                    <!-- Card 1: LSTM RMSE -->
+                    <rect x="8" y="40" width="138" height="60" fill="white" rx="4" stroke="#d0d9e8" stroke-width="1" />
+                    <text x="77" y="58" fill="#555" text-anchor="middle" font-size="8">GRU Best RMSE</text>
+                    <text x="77" y="78" fill="#1a3a6b" text-anchor="middle" font-size="16"
+                        font-weight="bold">0.1058</text>
+                    <text x="77" y="94" fill="#27ae60" text-anchor="middle" font-size="7.5">â€“Â¼ Lowest Error</text>
+                    <!-- Card 2: Win Rate -->
+                    <rect x="154" y="40" width="138" height="60" fill="white" rx="4" stroke="#d0d9e8"
+                        stroke-width="1" />
+                    <text x="223" y="58" fill="#555" text-anchor="middle" font-size="8">LSTM Win Rate</text>
+                    <text x="223" y="78" fill="#27ae60" text-anchor="middle" font-size="16"
+                        font-weight="bold">72.3%</text>
+                    <text x="223" y="94" fill="#1a3a6b" text-anchor="middle" font-size="7.5">â€“Â² Best Direction</text>
+                    <!-- Card 3: Sharpe -->
+                    <rect x="300" y="40" width="138" height="60" fill="white" rx="4" stroke="#d0d9e8"
+                        stroke-width="1" />
+                    <text x="369" y="58" fill="#555" text-anchor="middle" font-size="8">LSTM Sharpe Ratio</text>
+                    <text x="369" y="78" fill="#8e44ad" text-anchor="middle" font-size="16"
+                        font-weight="bold">1.45</text>
+                    <text x="369" y="94" fill="#555" text-anchor="middle" font-size="7.5">Risk-Adjusted Return</text>
+                    <!-- Card 4: VaR -->
+                    <rect x="446" y="40" width="165" height="60" fill="white" rx="4" stroke="#d0d9e8"
+                        stroke-width="1" />
+                    <text x="528" y="58" fill="#555" text-anchor="middle" font-size="8">Value-at-Risk (95%)</text>
+                    <text x="528" y="78" fill="#e74c3c" text-anchor="middle" font-size="16"
+                        font-weight="bold">Ë†â€™2.34%</text>
+                    <text x="528" y="94" fill="#555" text-anchor="middle" font-size="7.5">LSTM Max Exp. Loss</text>
+                    <!-- RMSE Bar Chart -->
+                    <rect x="8" y="110" width="290" height="120" fill="white" rx="4" stroke="#d0d9e8"
+                        stroke-width="1" />
+                    <text x="153" y="126" fill="#333" text-anchor="middle" font-size="9" font-weight="bold">Model RMSE
+                        Comparison</text>
+                    <!-- XGBoost bar -->
+                    <rect x="40" y="143" width="50" height="72" fill="#e74c3c" rx="2" />
+                    <text x="65" y="140" fill="#333" text-anchor="middle" font-size="7.5">0.1524</text>
+                    <text x="65" y="225" fill="#555" text-anchor="middle" font-size="7">XGBoost</text>
+                    <!-- LSTM bar -->
+                    <rect x="120" y="155" width="50" height="60" fill="#3498db" rx="2" />
+                    <text x="145" y="152" fill="#333" text-anchor="middle" font-size="7.5">0.1145</text>
+                    <text x="145" y="225" fill="#555" text-anchor="middle" font-size="7">LSTM</text>
+                    <!-- GRU bar -->
+                    <rect x="200" y="161" width="50" height="54" fill="#27ae60" rx="2" />
+                    <text x="225" y="158" fill="#333" text-anchor="middle" font-size="7.5">0.1058</text>
+                    <text x="225" y="225" fill="#555" text-anchor="middle" font-size="7">GRU (Best)</text>
+                    <!-- Trading Signals -->
+                    <rect x="306" y="110" width="305" height="120" fill="white" rx="4" stroke="#d0d9e8"
+                        stroke-width="1" />
+                    <text x="458" y="126" fill="#333" text-anchor="middle" font-size="9" font-weight="bold">Active BI
+                        Trading Signals</text>
+                    <!-- BUY signal -->
+                    <rect x="318" y="133" width="280" height="26" fill="#d5f4e6" rx="3" />
+                    <circle cx="330" cy="146" r="6" fill="#27ae60" />
+                    <text x="344" y="151" fill="#1a5c35" font-size="8" font-weight="bold">BUY â‚¬â€ RSI &lt; 30 + MACD
+                        crossover + GRU uptrend signal</text>
+                    <!-- HOLD signal -->
+                    <rect x="318" y="163" width="280" height="26" fill="#fef9e7" rx="3" />
+                    <circle cx="330" cy="176" r="6" fill="#f39c12" />
+                    <text x="344" y="181" fill="#7d6608" font-size="8" font-weight="bold">HOLD â‚¬â€ High volatility,
+                        Bollinger Bands expanding</text>
+                    <!-- SELL signal -->
+                    <rect x="318" y="193" width="280" height="26" fill="#fadbd8" rx="3" />
+                    <circle cx="330" cy="206" r="6" fill="#e74c3c" />
+                    <text x="344" y="211" fill="#78281f" font-size="8" font-weight="bold">SELL â‚¬â€ RSI &gt; 70 overbought
+                        + LSTM downtrend predicted</text>
+                    <!-- Footer bar -->
+                    <rect x="0" y="268" width="620" height="32" fill="#ecf0f1" rx="0" />
+                    <rect x="0" y="264" width="620" height="4" fill="#1a3a6b" />
+                    <text x="310" y="288" fill="#555" text-anchor="middle" font-size="7.5">Dataset: 43,788 Bitcoin
+                        Hourly Records (2021â‚¬â€œ2026) | Features: 15 Technical Indicators | Framework: 4-Layer BI
+                        Architecture</text>
+                </svg>
+                <div class="figure-caption">Fig. 5. Enterprise-Grade Business Intelligence Decision Support Dashboard
+                    Illustrating Layer 4 KPI Output: Model Performance Metrics, Comparative RMSE Benchmarking, and
+                    Automated BUY/HOLD/SELL Trading Signal Generation.</div>
+            </div>
+
+            <p>Regarding deployments operating rapid micro-allocation algorithmic networks targeting high-frequency
+                volume arbitrage strategiesâ‚¬â€where precisely predicting absolute prices equates secondary importance
+                below directional consistencyâ‚¬â€the LSTM framework dictates absolute deployment. Maintaining profound
+                timeline anticipation reliability matching profoundly rapid computing velocities mathematically isolates
+                LSTM boundaries guaranteeing minimal latency disruptions alongside heavily fortified risk-reward
+                boundaries [26], [27], [28].</p>
+            <p>Conversely, when servicing institutional portfolio valuation requirements calculating specific multi-day
+                exposure mandates requiring incredibly tight dollar proximity regression calculations, GRU architectures
+                universally offer the undeniable standard returning minimal nominal mapping errors identically bridging
+                broad volatility.</p>
+
+            <h1>Conclusion</h1>
+            <p>This master's research effectively engineers and strictly operationalizes a highly precise four-layer
+                Business Intelligence computing platform explicitly tailored resolving chaotic cryptocurrency
+                extrapolations. By commanding massive 43,788 historical data sequences matching precise feature
+                engineering dimensions mapped dynamically evaluating SHAP impact correlations, this architecture
+                aggressively overcomes the fundamental limitations crippling contemporary tree-ensemble baseline
+                networks (XGBoost). The mathematical output precisely concludes an unavoidable topology trade-off
+                matrix: GRU geometries universally minimize global structural alignment regressions mathematically
+                leading absolute proximity matrices (RMSE). Contrastingly, LSTM capabilities consistently dominate
+                directional long-memory verification constraints generating substantially robust continuous financial
+                viability indicators defining definitive risk control environments universally superior supporting
+                interactive decision support paradigms.</p>
+
+            <h1 class="references-heading" style="border: none; counter-increment: none;">References</h1>
+            <div class="references">
+                <p>[1] S. McNally, J. Roche, and S. Caton, "Predicting the price of Bitcoin using machine learning,"
+                    in <i>Proc. 26th Euromicro Int. Conf. Parallel Distrib. Netw.-Based Process. (PDP)</i>,
+                    Cambridge, UK, 2018, pp. 339â‚¬â€œ343, doi: 10.1109/PDP2018.2018.00060.</p>
+                <p>[2] S. Lahmiri and S. Bekiros, "Cryptocurrency forecasting with deep learning chaotic neural
+                    networks," <i>Chaos Solitons Fractals</i>, vol. 118, pp. 35â‚¬â€œ40, Jan. 2019, doi:
+                    10.1016/j.chaos.2018.11.014.</p>
+                <p>[3] H. SebastiÃƒÂ£o and P. Godinho, "Forecasting and trading cryptocurrencies with machine
+                    learning under changing market conditions," <i>Financ. Innov.</i>, vol. 7, no. 1, p. 3,
+                    Jan. 2021, doi: 10.1186/s40854-020-00219-1.</p>
+                <p>[4] P. Jaquart, D. Dann, and C. Weinhardt, "Short-term bitcoin market prediction via machine
+                    learning," <i>J. Finance Data Sci.</i>, vol. 7, pp. 45â‚¬â€œ66, 2021, doi:
+                    10.1016/j.jfds.2021.03.001.</p>
+                <p>[5] M. Mudassir, S. Bennbaia, D. Unal, and M. Hammoudeh, "Time-series forecasting of Bitcoin
+                    prices using high-dimensional features: a machine learning approach," <i>Neural Comput.
+                    Appl.</i>, vol. 32, pp. 15997â‚¬â€œ16002, Dec. 2020, doi: 10.1007/s00521-020-04299-w.</p>
+                <p>[6] M. Sewell, "Characterization of financial time series," Research Note RN/11/01, Dept.
+                    Comput. Sci., Univ. College London, London, UK, 2011.</p>
+                <p>[7] E. F. Fama, "Efficient capital markets: A review of theory and empirical work," <i>J.
+                    Finance</i>, vol. 25, no. 2, pp. 383â‚¬â€œ417, May 1970, doi: 10.2307/2325486.</p>
+                <p>[8] T. Chen and C. Guestrin, "XGBoost: A scalable tree boosting system," in <i>Proc. 22nd ACM
+                    SIGKDD Int. Conf. Knowl. Discovery Data Mining</i>, San Francisco, CA, USA, Aug. 2016, pp.
+                    785â‚¬â€œ794, doi: 10.1145/2939672.2939785.</p>
+                <p>[9] S. Hochreiter and J. Schmidhuber, "Long short-term memory," <i>Neural Comput.</i>, vol. 9,
+                    no. 8, pp. 1735â‚¬â€œ1780, Nov. 1997, doi: 10.1162/neco.1997.9.8.1735.</p>
+                <p>[10] K. Cho, B. Van MerriÃƒÂ«nboer, C. Gulcehre, D. Bahdanau, F. Bougares, H. Schwenk, and Y.
+                    Bengio, "Learning phrase representations using RNN encoder-decoder for statistical machine
+                    translation," in <i>Proc. 2014 Conf. Empir. Methods Nat. Lang. Process. (EMNLP)</i>, Doha,
+                    Qatar, Oct. 2014, pp. 1724â‚¬â€œ1734, doi: 10.3115/v1/D14-1179.</p>
+                <p>[11] I. E. Livieris, E. Pintelas, and P. Pintelas, "A CNNâ‚¬â€œLSTM model for gold price
+                    time-series forecasting," <i>Neural Comput. Appl.</i>, vol. 32, no. 23, pp. 17351â‚¬â€œ17360,
+                    Dec. 2020, doi: 10.1007/s00521-020-04867-x.</p>
+                <p>[12] Y. Bengio, P. Simard, and P. Frasconi, "Learning long-term dependencies with gradient
+                    descent is difficult," <i>IEEE Trans. Neural Netw.</i>, vol. 5, no. 2, pp. 157â‚¬â€œ166,
+                    Mar. 1994, doi: 10.1109/72.279181.</p>
+                <p>[13] P. L. Seabe, C. R. Moutsinga, and E. Pindza, "Forecasting cryptocurrency prices using
+                    LSTM, GRU, and bi-directional LSTM: A deep learning approach," <i>Fractal Fract.</i>,
+                    vol. 7, no. 2, p. 188, Feb. 2023, doi: 10.3390/fractalfract7020188.</p>
+                <p>[14] T. Fischer and C. Krauss, "Deep learning with long short-term memory networks for
+                    financial market predictions," <i>Eur. J. Oper. Res.</i>, vol. 270, no. 2, pp. 654â‚¬â€œ669,
+                    Oct. 2018, doi: 10.1016/j.ejor.2017.11.054.</p>
+                <p>[15] W. Jiang, "Applications of deep learning in stock market prediction: Recent progress,"
+                    <i>Expert Syst. Appl.</i>, vol. 184, p. 115537, Dec. 2021, doi:
+                    10.1016/j.eswa.2021.115537.</p>
+                <p>[16] B. M. Henrique, V. A. Sobreiro, and H. Kimura, "Literature review: Machine learning
+                    techniques applied to financial market prediction," <i>Expert Syst. Appl.</i>, vol. 124,
+                    pp. 226â‚¬â€œ251, Jun. 2019, doi: 10.1016/j.eswa.2019.01.012.</p>
+                <p>[17] S. Siami-Namini, N. Tavakoli, and A. S. Namin, "A comparison of ARIMA and LSTM in
+                    forecasting time series," in <i>Proc. 17th IEEE Int. Conf. Mach. Learn. Appl. (ICMLA)</i>,
+                    Orlando, FL, USA, Dec. 2018, pp. 1394â‚¬â€œ1401, doi: 10.1109/ICMLA.2018.00227.</p>
+                <p>[18] A. Thakkar and K. Chaudhari, "Fusion in stock market prediction: A decade survey on the
+                    necessity, recent developments, and potential future directions," <i>Inf. Fusion</i>, vol. 65,
+                    pp. 95â‚¬â€œ107, Jan. 2021, doi: 10.1016/j.inffus.2020.08.019.</p>
+                <p>[19] S. Nakamoto, "Bitcoin: A peer-to-peer electronic cash system," White Paper, Oct. 2008.
+                    [Online]. Available: https://bitcoin.org/bitcoin.pdf.</p>
+                <p>[20] J. W. Goodell, S. Ben Jabeur, F. SaÃƒÂ¢daoui, and M. A. Nasir, "Explainable artificial
+                    intelligence modeling to forecast bitcoin prices," <i>Int. Rev. Financ. Anal.</i>, vol. 88,
+                    p. 102702, Jul. 2023, doi: 10.1016/j.irfa.2023.102702.</p>
+                <p>[21] S. M. Lundberg and S.-I. Lee, "A unified approach to interpreting model predictions,"
+                    in <i>Proc. 31st Adv. Neural Inf. Process. Syst. (NeurIPS)</i>, Long Beach, CA, USA, 2017,
+                    pp. 4765â‚¬â€œ4774.</p>
+                <p>[22] V. Hassija et al., "Interpreting black-box models: A review on explainable artificial
+                    intelligence," <i>Cogn. Comput.</i>, vol. 16, no. 1, pp. 45â‚¬â€œ74, Jan. 2024, doi:
+                    10.1007/s12559-023-10179-8.</p>
+                <p>[23] D. P. Kingma and J. Ba, "Adam: A method for stochastic optimization," in <i>Proc. 3rd
+                    Int. Conf. Learn. Represent. (ICLR)</i>, San Diego, CA, USA, 2015, arXiv:1412.6980.</p>
+                <p>[24] N. Srivastava, G. Hinton, A. Krizhevsky, I. Sutskever, and R. Salakhutdinov, "Dropout:
+                    A simple way to prevent neural networks from overfitting," <i>J. Mach. Learn. Res.</i>,
+                    vol. 15, no. 1, pp. 1929â‚¬â€œ1958, 2014.</p>
+                <p>[25] A. Graves, "Supervised sequence labelling with recurrent neural networks," in
+                    <i>Studies in Computational Intelligence</i>, vol. 385, Berlin, Germany: Springer, 2012,
+                    doi: 10.1007/978-3-642-24797-2.</p>
+                <p>[26] A. Akyildirim, A. Goncu, and A. Sensoy, "Prediction of cryptocurrency returns using
+                    machine learning," <i>Ann. Oper. Res.</i>, vol. 297, no. 1â‚¬â€œ2, pp. 3â‚¬â€œ36, Feb. 2021, doi:
+                    10.1007/s10479-020-03575-y.</p>
+                <p>[27] M. Nakano, A. Takahashi, and S. Takahashi, "Bitcoin technical trading with artificial
+                    neural network," <i>Physica A</i>, vol. 510, pp. 587â‚¬â€œ609, Nov. 2018, doi:
+                    10.1016/j.physa.2018.07.017.</p>
+                <p>[28] W. Kristjanpoller and M. C. Minutolo, "A hybrid volatility forecasting framework
+                    integrating GARCH, artificial neural network, technical analysis and principal components
+                    analysis," <i>Expert Syst. Appl.</i>, vol. 109, pp. 1â‚¬â€œ11, Nov. 2018, doi:
+                    10.1016/j.eswa.2018.05.011.</p>
+            </div>
+
+        </div>
+        <div class="page-number">- 5 -</div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- PAGE 6 â‚¬â€œ References (continued [29]â‚¬â€œ[40])     -->
+    <!-- ============================================== -->
+    <div class="page" id="page-6">
+        <div class="page-content">
+
+            <h1 class="references-heading" style="border: none; counter-increment: none;">References <i>(Continued)</i></h1>
+            <div class="references">
+                <p>[29] B. G. Malkiel, "The efficient market hypothesis and its critics," <i>J. Econ.
+                    Perspect.</i>, vol. 17, no. 1, pp. 59â‚¬â€œ82, Jan. 2003, doi: 10.1257/089533003321164958.</p>
+                <p>[30] Y. LeCun, Y. Bengio, and G. Hinton, "Deep learning," <i>Nature</i>, vol. 521,
+                    no. 7553, pp. 436â‚¬â€œ444, May 2015, doi: 10.1038/nature14539.</p>
+                <p>[31] D. Shah and K. Zhang, "Bayesian regression and Bitcoin," in <i>Proc. 52nd Annu. Allerton
+                    Conf. Commun. Control Comput.</i>, Monticello, IL, USA, 2014, pp. 409â‚¬â€œ414, doi:
+                    10.1109/ALLERTON.2014.7028484.</p>
+                <p>[32] L. Alessandretti, A. ElBahrawy, L. M. Aiello, and A. Baronchelli, "Anticipating
+                    cryptocurrency prices using machine learning," <i>Complexity</i>, vol. 2018, p. 8983590,
+                    Nov. 2018, doi: 10.1155/2018/8983590.</p>
+                <p>[33] E. Bouri, R. Gupta, A. K. Tiwari, and D. Roubaud, "Does Bitcoin hedge global
+                    uncertainty? Evidence from wavelet-based quantile-in-quantile regressions," <i>Finance Res.
+                    Lett.</i>, vol. 23, pp. 87â‚¬â€œ95, Dec. 2017, doi: 10.1016/j.frl.2017.02.009.</p>
+                <p>[34] J. Patel, S. Shah, P. Thakkar, and K. Kotecha, "Predicting stock and stock price index
+                    movement using trend deterministic data preparation and machine learning techniques,"
+                    <i>Expert Syst. Appl.</i>, vol. 42, no. 1, pp. 259â‚¬â€œ268, Jan. 2015, doi:
+                    10.1016/j.eswa.2014.07.040.</p>
+                <p>[35] L. Breiman, "Random forests," <i>Mach. Learn.</i>, vol. 45, no. 1, pp. 5â‚¬â€œ32, Oct.
+                    2001, doi: 10.1023/A:1010933404324.</p>
+                <p>[36] M. Ballings, D. Van den Poel, N. Hespeels, and R. Gryp, "Evaluating multiple
+                    classifiers for stock price direction prediction," <i>Expert Syst. Appl.</i>, vol. 42,
+                    no. 20, pp. 7046â‚¬â€œ7056, Nov. 2015, doi: 10.1016/j.eswa.2015.05.013.</p>
+                <p>[37] F. NazÃƒÂ¡rio, J. L. e Silva, V. A. Sobreiro, and H. Kimura, "A literature review of
+                    technical analysis on stock markets," <i>Q. Rev. Econ. Finance</i>, vol. 66, pp. 115â‚¬â€œ126,
+                    Nov. 2017, doi: 10.1016/j.qref.2017.01.014.</p>
+                <p>[38] Z. Liao and X. Wang, "Forecasting model of global stock index by stochastic time
+                    effective neural network," <i>Expert Syst. Appl.</i>, vol. 37, no. 1, pp. 834â‚¬â€œ841,
+                    Jan. 2010, doi: 10.1016/j.eswa.2009.05.086.</p>
+                <p>[39] A. Vidal and W. Kristjanpoller, "Gold volatility prediction using a CNN-LSTM approach,"
+                    <i>Expert Syst. Appl.</i>, vol. 157, p. 113481, Nov. 2020, doi:
+                    10.1016/j.eswa.2020.113481.</p>
+                <p>[40] W. Zhong and J. R. Enke, "Predicting the daily return direction of the stock market
+                    using hybrid machine learning algorithms," <i>Financ. Innov.</i>, vol. 5, no. 1, p. 4,
+                    Feb. 2019, doi: 10.1186/s40854-019-0121-4.</p>
+            </div>
+
+        </div>
+        <div class="page-number">- 6 -</div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal Tesis Lengkap - Prediksi Bitcoin</title>
+    <!-- MathJax for rendering equations -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 11pt;
+            line-height: 1.5;
+            background-color: #fff;
+            margin: 0 auto;
+            padding: 40px 20px;
+            max-width: 850px;
+            color: #000;
+        }
+
+        .header-block {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .document-type {
+            font-size: 14pt;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-size: 16pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .authors {
+            font-size: 12pt;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .affiliation {
+            font-size: 11pt;
+            margin-bottom: 25px;
+        }
+
+        .abstract-section {
+            text-align: justify;
+            margin: 0 0 20px 0;
+            font-size: 10.5pt;
+            font-style: italic;
+        }
+
+        h1 {
+            font-size: 13pt;
+            font-weight: bold;
+            font-variant: small-caps;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 6px;
+        }
+
+        h2 {
+            font-size: 11.5pt;
+            font-weight: bold;
+            margin-top: 18px;
+            margin-bottom: 8px;
+        }
+
+        h3 {
+            font-size: 11pt;
+            font-style: italic;
+            font-weight: bold;
+            margin-top: 12px;
+            margin-bottom: 6px;
+        }
+
+        p {
+            text-align: justify;
+            text-indent: 0.3in;
+            margin: 0 0 10px 0;
+        }
+
+        .bab-header {
+            text-align: center;
+            font-size: 13pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 30px;
+            margin-bottom: 5px;
+            font-variant: small-caps;
+        }
+
+        .bab-title {
+            text-align: center;
+            font-size: 12pt;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .sub-section {
+            margin-top: 20px;
+        }
+
+        .sub-section-title {
+            font-size: 11.5pt;
+            font-weight: bold;
+            margin-top: 18px;
+            margin-bottom: 8px;
+        }
+
+        ol.rumusan {
+            margin-left: 0.5in;
+            margin-bottom: 10px;
+        }
+
+        ol.rumusan li {
+            text-align: justify;
+            margin-bottom: 6px;
+        }
+
+        ul.manfaat {
+            margin-left: 0.5in;
+            margin-bottom: 10px;
+        }
+
+        ul.manfaat li {
+            text-align: justify;
+            margin-bottom: 6px;
+        }
+
+        .sistematika-item {
+            margin-bottom: 8px;
+            text-align: justify;
+        }
+
+        .sistematika-item strong {
+            display: inline;
+        }
+
+        .figure {
+            text-align: center;
+            margin: 20px 0;
+            break-inside: avoid;
+        }
+
+        .figure img {
+            width: 100%;
+            max-width: 600px;
+            border: 1px solid #e5e5e5;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .figure-caption {
+            font-size: 9.5pt;
+            text-align: justify;
+            margin-top: 10px;
+        }
+
+        .table-container {
+            margin: 20px 0;
+            text-align: center;
+            break-inside: avoid;
+        }
+
+        .table-title {
+            font-size: 10pt;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10pt;
+            margin-bottom: 10px;
+        }
+
+        th,
+        td {
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .equation {
+            margin: 15px 0;
+            font-size: 11pt;
+            text-align: center;
+            break-inside: avoid;
+        }
+
+        .svg-figure {
+            text-align: center;
+            margin: 20px 0;
+            break-inside: avoid;
+        }
+
+        .dashboard-figure {
+            text-align: center;
+            margin: 20px 0;
+            break-inside: avoid;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background: #f9f9f9;
+        }
+
+        .references p {
+            text-indent: -0.3in;
+            margin-left: 0.3in;
+            margin-bottom: 6px;
+            text-align: left;
+            font-size: 10.5pt;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header-block">
+        <div class="document-type">PROPOSAL TESIS</div>
+        <div class="title">Kerangka Kerja Business Intelligence untuk Prediksi Cryptocurrency: Studi Komparatif LSTM,
+            GRU, dan Eksekusi Baseline Ensemble Menggunakan Analitika Big Data</div>
+        <div class="authors">Asep Surahman Sulaeman</div>
+        <div class="affiliation">Magister Informatika, Universitas Nusa Putra, Sukabumi, Indonesia<br>
+            Email: asep.surahman_mti24@nusaputra.ac.id</div>
+    </div>
+
+    <div class="abstract-section">
+        <strong>Abstrak</strong>&mdash; Pasar <em>cryptocurrency</em>&mdash;khususnya Bitcoin&mdash;dikenal
+        memiliki tingkat volatilitas yang sangat tinggi, beroperasi tanpa henti selama 24 jam sehari, dan sangat
+        peka terhadap berbagai faktor eksternal. Kondisi ini menjadikan prediksi harga Bitcoin sebagai tantangan
+        komputasional yang kompleks, sekaligus peluang riset yang krusial bagi dunia investasi. Penelitian ini
+        mengajukan sebuah <em>kerangka kerja Business Intelligence (BI) empat lapis</em> yang dirancang untuk
+        menjembatani kesenjangan antara model prediksi berbasis kecerdasan buatan dengan sistem pendukung
+        keputusan yang dapat langsung digunakan oleh para praktisi investasi. Kerangka yang diusulkan akan
+        memanfaatkan dataset berfrekuensi tinggi sebanyak 43.788 rekaman harga Bitcoin (BTC/USDT) per jam
+        selama lima tahun (2021&ndash;2026) dari Binance API, yang secara inheren memenuhi seluruh dimensi
+        fundamental Big Data (Volume, Velocity, Variety, Veracity, Value). Sebanyak 15 indikator teknikal
+        akan direkayasa sebagai fitur input model dan dievaluasi kontribusinya menggunakan metode
+        <em>SHapley Additive exPlanations</em> (SHAP) untuk memastikan transparansi dan interpretabilitas
+        model. Tiga algoritma akan dibandingkan secara sistematis: <em>Long Short-Term Memory</em> (LSTM)
+        dan <em>Gated Recurrent Unit</em> (GRU) sebagai model <em>deep learning</em> sekuensial, serta
+        XGBoost sebagai model <em>baseline</em> acuan. Seluruh model akan dioptimasi melalui <em>Grid
+        Search</em> dan diuji menggunakan metodologi <em>Walk-Forward Validation</em> untuk mencegah
+        kebocoran data masa depan ke proses pelatihan. Penelitian ini dihipotesiskan akan mengungkap adanya
+        <em>tradeoff</em> yang signifikan antara model yang unggul dalam presisi numerik (RMSE) dan model
+        yang unggul dalam akurasi arah pergerakan pasar (<em>Win Rate</em>). Keluaran prediksi selanjutnya
+        akan ditransformasikan ke dalam metrik risiko finansial eksekutif&mdash;meliputi <em>Sharpe
+        Ratio</em>, <em>Value at Risk</em> (VaR 95%), dan <em>Directional Win Rate</em>&mdash;dan
+        disajikan dalam prototipe <em>BI Decision Support Dashboard</em> yang fungsional. Penelitian ini
+        diharapkan menghasilkan sistem kecerdasan bisnis yang utuh, transparan, dan dapat
+        dipertanggungjawabkan secara ilmiah bagi para manajer investasi dalam menghadapi dinamika pasar
+        aset digital.
+        <br><br>
+        <strong>Kata Kunci</strong>&mdash; Business Intelligence, Prediksi Cryptocurrency, Big Data Analytics,
+        Deep Learning, XGBoost, LSTM, GRU, Informatika Finansial, Bitcoin.
+    </div>
+
+    <h1>BAB I: PENDAHULUAN</h1>
+
+    <h2>1.1 Latar Belakang</h2>
+    <p>Perkembangan teknologi digital selama satu dekade terakhir telah secara masif mengubah lanskap sistem
+        keuangan global. Kemunculan aset kripto&mdash;terutama Bitcoin (BTC) yang pertama kali diperkenalkan oleh
+        Nakamoto [1] pada tahun 2008 sebagai sistem pembayaran terdesentralisasi&mdash;kini telah bertransformasi
+        menjadi kelas aset investasi baru yang bernilai triliunan dolar dan mendisrupsi paradigma investasi
+        tradisional secara fundamental. Berdasarkan data CoinMarketCap per tahun 2024, kapitalisasi pasar Bitcoin
+        telah melampaui angka 1,2 triliun dolar Amerika Serikat, menjadikannya aset digital dengan valuasi
+        terbesar di dunia [2].</p>
+    <p>Namun di balik potensi keuntungan yang sangat besar tersebut, pasar cryptocurrency&mdash;terutama
+        Bitcoin&mdash;memiliki karakteristik yang sangat berbeda dari pasar konvensional. Pasar ini beroperasi
+        penuh selama 24 jam sehari dan 7 hari seminggu tanpa jeda, bersifat sangat terdesentralisasi, tidak
+        terikat regulasi tunggal, dan sangat rentan terhadap perubahan sentimen makroekonomi serta faktor
+        eksternal seperti kebijakan pemerintah, perkembangan teknologi blockchain, dan pengaruh tokoh-tokoh
+        berpengaruh di media sosial. Kondisi inilah yang menyebabkan pergerakan harga Bitcoin bersifat
+        <em>non-linear</em>, penuh <em>noise</em>, dan sangat sulit diprediksi [3], [4].</p>
+    <p>Gambar 1.1 menunjukkan lintasan pergerakan harga aktual Bitcoin (BTC/USDT) selama periode 2021&ndash;2026.
+        Dinamika volatilitas aset tersebut secara gamblang mencerminkan besarnya pengaruh guncangan eksternal.
+        Dalam rentang lima tahun tersebut,
+        harga Bitcoin mencatat lonjakan ke puncak tertinggi pertama (<em>All-Time High</em>/ATH) sebesar
+        &plusmn;$69.000 pada November 2021, kemudian anjlok drastis hingga ke titik terendah &plusmn;$16.500
+        akibat serangkaian krisis beruntun: keruntuhan ekosistem Terra/LUNA (Mei 2022), kebangkrutan bursa
+        kripto FTX (November 2022), serta memburuknya sentimen pasar global akibat invasi Rusia ke Ukraina
+        (Februari 2022) [5]. Pasar kripto kembali terguncang pada Oktober 2023 saat meletusnya konflik
+        bersenjata Hamas&ndash;Israel yang kemudian meningkat menjadi konfrontasi langsung ketika Iran
+        melancarkan serangan rudal dan <em>drone</em> ke wilayah Israel pada April 2024&mdash;bertepatan
+        dengan momen <em>Bitcoin Halving</em> ke-4. Memasuki akhir 2024, harga Bitcoin mencapai ATH baru
+        di atas $100.000 seiring terpilihnya kembali Donald Trump sebagai Presiden Amerika Serikat
+        dengan platform kebijakan ramah aset digital.</p>
+    <p>Puncak ketidakpastian geopolitik dalam periode penelitian ini terjadi pada tahun 2026, ketika koalisi
+        militer Amerika Serikat dan Israel melancarkan serangkaian serangan terhadap fasilitas nuklir dan
+        infrastruktur militer Iran pada 28 Februari 2026, memicu eskalasi konflik berskala penuh di kawasan
+        Timur Tengah [6]. Ancaman penutupan Selat Hormuz oleh Iran&mdash;salah satu jalur distribusi energi
+        terpenting di dunia&mdash;menyebabkan harga minyak melonjak lebih dari 5% dan memicu gelombang
+        <em>risk-off</em> di seluruh pasar keuangan global. Penelitian yang menganalisis dampak guncangan
+        geopolitik terhadap aset kripto menunjukkan bahwa berita geopolitik negatif memiliki dampak yang
+        lebih kuat dan asimetris dibandingkan berita positif terhadap volatilitas Bitcoin [5], [6].
+        Hal ini terbukti secara empiris: harga Bitcoin turun tajam dari kisaran $72.000 ke $63.000 dalam
+        beberapa hari pertama konflik, dan kembali terkoreksi ke $66.824 pasca pidato Presiden Trump pada
+        2 April 2026 yang mengisyaratkan eskalasi lebih lanjut, dengan <em>Crypto Fear &amp; Greed Index</em>
+        anjlok ke angka 8/100 (&ldquo;<em>Extreme Fear</em>&rdquo;) [5]. Fenomena ini secara konsisten
+        memperlihatkan bahwa Bitcoin berperilaku sebagai aset berisiko tinggi (<em>high-beta risk asset</em>)
+        yang tidak dapat dimodelkan secara memadai oleh pendekatan statistik linier konvensional [5].</p>
+    <div class="figure">
+        <img src="../04_Visualizations/btc_5year_trend.png"
+             alt="Lintasan Pergerakan Harga Aktual Bitcoin (BTC/USDT) 43.788 Data per Jam 2021-2026">
+        <div class="figure-caption"><strong>Gambar 1.1</strong> Lintasan Pergerakan Harga Aktual Bitcoin (BTC/USDT)
+            dengan 43.788 Observasi Per Jam pada Periode 2021&ndash;2026 (Sumber Data: Binance Spot API).</div>
+    </div>
+    <p>Di tingkat nasional, pertumbuhan pasar kripto di Indonesia turut mencatat angka yang sangat signifikan.
+        Berdasarkan data Badan Pengawas Perdagangan Berjangka Komoditi (Bappebti) tahun 2023, jumlah investor
+        aset kripto terdaftar di Indonesia telah melampaui 17 juta akun, menempatkan Indonesia sebagai salah
+        satu pasar kripto ritel terbesar di Asia Tenggara. Besarnya basis investor domestik yang berpartisipasi
+        langsung di pasar yang sangat volatil ini mempertegas urgensi kehadiran sistem pendukung keputusan
+        berbasis kecerdasan buatan yang mudah diakses, transparan, dan relevan bagi para manajer investasi
+        dan pelaku pasar di Indonesia.</p>
+    <p>Secara metodologis, model analisis finansial tradisional&mdash;seperti <em>Autoregressive Integrated
+        Moving Average</em> (ARIMA) dan <em>Generalized Autoregressive Conditional Heteroskedasticity</em>
+        (GARCH)&mdash;diperkirakan tidak mampu mengakomodasi kompleksitas data pasar kripto. Model-model tersebut
+        mensyaratkan kondisi data yang <em>stasioner</em> dan mengasumsikan hubungan linier antar variabel;
+        kondisi yang hampir tidak pernah terpenuhi dalam data Bitcoin berfrekuensi tinggi [7], [8]. Kegagalan
+        pendekatan tradisional inilah yang mendorong komunitas riset global untuk beralih ke paradigma
+        komputasi yang lebih canggih, yakni arsitektur <em>Deep Learning</em> berbasis Jaringan Saraf Tiruan
+        (JST) yang mampu memodelkan pola dependensi temporal non-linear secara otomatis [9].</p>
+    <p>Di antara berbagai arsitektur <em>Deep Learning</em>, model berbasis <em>Recurrent Neural Network</em>
+        (RNN) dengan mekanisme gerbang memori dihipotesiskan mampu mendominasi pemodelan deret waktu finansial.
+        Arsitektur <em>Long Short-Term Memory</em> (LSTM) yang diperkenalkan oleh Hochreiter dan Schmidhuber [10]
+        mampu mengatasi masalah <em>vanishing gradient</em> pada RNN standar melalui mekanisme gerbang selektif
+        (input, forget, output) yang memungkinkan model mempertahankan informasi dalam rentang waktu yang panjang.
+        Selanjutnya, arsitektur <em>Gated Recurrent Unit</em> (GRU) yang dikembangkan oleh Cho dkk. [11] hadir
+        sebagai penyederhanaan yang lebih efisien secara komputasi namun tetap kompetitif dalam hal akurasi
+        prediksi deret waktu.</p>
+    <p>Meskipun demikian, terdapat kesenjangan kritis yang belum banyak dieksplorasi dalam literatur: mayoritas
+        penelitian yang ada hanya menghasilkan angka prediksi harga secara terisolasi, tanpa mengintegrasikan
+        keluaran model tersebut ke dalam sebuah sistem <em>Business Intelligence</em> (BI) yang siap digunakan
+        oleh para pengambil keputusan di dunia nyata. Sebagai ilustrasi, seorang manajer investasi tidak dapat
+        mengambil keputusan strategis semata dari nilai RMSE sebuah model; mereka membutuhkan metrik bisnis
+        yang terukur dan dapat ditafsirkan, seperti <em>Win Rate</em> (akurasi arah pergerakan pasar),
+        <em>Sharpe Ratio</em> (efisiensi imbal hasil per unit risiko), dan <em>Value at Risk</em> (estimasi
+        kerugian maksimum pada tingkat kepercayaan tertentu) [12], [13].</p>
+    <p>Untuk menjawab kesenjangan tersebut, penelitian ini merancang sebuah <em>kerangka kerja Business
+        Intelligence empat lapis</em> (4-Layer BI Framework) yang mengintegrasikan seluruh
+        <em>pipeline</em>&mdash;mulai dari akuisisi data Big Data melalui Binance API, rekayasa 15 fitur
+        teknikal, pelatihan model komparatif (LSTM, GRU, XGBoost), hingga penyajian hasil dalam antarmuka
+        <em>Decision Support Dashboard</em> yang dapat dioperasikan secara langsung oleh praktisi industri.
+        Penelitian ini menggunakan dataset berfrekuensi sangat tinggi sebanyak 43.788 rekaman data historis
+        Bitcoin per jam dalam rentang lima tahun (2021&ndash;2026), yang secara inheren memenuhi karakteristik
+        fundamental Big Data: Volume, Velocity, Variety, Veracity, dan Value [2], [14].</p>
+    <p>Sebagian besar penelitian terdahulu di bidang ini terhenti pada tahap menghasilkan angka performa
+        model&mdash;seperti nilai RMSE atau tingkat akurasi&mdash;tanpa menjawab pertanyaan yang sesungguhnya
+        penting bagi para praktisi investasi: <em>model mana yang paling tepat untuk keputusan investasi nyata,
+        dan bagaimana hasilnya dapat langsung digunakan?</em> <strong>Kebaruan (<em>novelty</em>) penelitian
+        ini</strong> terletak pada tiga kontribusi utama yang belum pernah diintegrasikan dalam satu kerangka
+        penelitian secara bersamaan. <em>Pertama</em>, membandingkan tiga algoritma prediksi (LSTM, GRU,
+        XGBoost) pada dataset Bitcoin berskala penuh menggunakan metodologi <em>Walk-Forward Validation</em>
+        yang secara ketat mencegah kebocoran data masa depan ke dalam proses pelatihan&mdash;masalah
+        metodologis yang sering diabaikan dalam studi serupa [7], [8]. <em>Kedua</em>, menganalisis
+        <em>tradeoff</em> antara dua dimensi ketepatan prediksi yang berbeda: ketepatan nilai prediksi secara
+        numerik versus ketepatan arah pergerakan harga (naik atau turun), yang memiliki implikasi keputusan
+        berbeda bagi investor [12], [13]. <em>Ketiga</em>, mentransformasikan seluruh hasil prediksi ke dalam
+        metrik risiko bisnis yang siap pakai (Sharpe Ratio, VaR, Win Rate) dan menyajikannya dalam
+        <em>BI Decision Support Dashboard</em> fungsional guna mendukung pengambilan keputusan investasi
+        secara langsung. Dengan demikian, penelitian ini tidak sekadar membangun model prediksi, melainkan
+        menghadirkan sistem kecerdasan bisnis yang utuh, transparan, dan dapat dipertanggungjawabkan
+        secara ilmiah.</p>
+
+    <h2>1.2 Identifikasi Masalah</h2>
+    <p>Berdasarkan uraian latar belakang di atas, setidaknya terdapat lima permasalahan mendasar yang menjadi
+        motivasi utama penelitian ini:</p>
+    <ol class="rumusan">
+        <li><strong>Keterbatasan model prediksi tradisional.</strong> Model statistik klasik seperti ARIMA dan
+            GARCH dirancang untuk data yang stabil dan bergerak secara linier. Ketika diterapkan pada data
+            Bitcoin yang bergerak ekstrem dan tidak beraturan, model-model ini diperkirakan menghasilkan
+            tingkat kesalahan prediksi yang sangat tinggi [7], [8].</li>
+        <li><strong>Minimnya perbandingan metodologis yang adil dan ketat.</strong> Sebagian besar penelitian
+            yang ada membandingkan model tanpa prosedur pencegahan kebocoran data yang memadai. Belum terdapat
+            studi komparatif yang secara bersamaan membandingkan LSTM, GRU, dan XGBoost menggunakan
+            <em>Walk-Forward Validation</em> pada dataset Bitcoin berskala penuh (43.788 rekaman per jam).</li>
+        <li><strong>Hasil penelitian yang tidak dapat langsung digunakan oleh praktisi.</strong> Mayoritas
+            penelitian hanya melaporkan angka kesalahan teknis (RMSE, MAE, MAPE) tanpa menerjemahkannya ke
+            dalam metrik bisnis yang bermakna bagi investor, seperti <em>Win Rate</em> (seberapa sering prediksi
+            arah pasar tepat), <em>Sharpe Ratio</em> (efisiensi imbal hasil), dan <em>Value at Risk&mdash;VaR</em>
+            (estimasi kerugian terburuk) [12], [13].</li>
+        <li><strong>Tidak adanya kerangka kerja BI yang terintegrasi dari hulu ke hilir.</strong> Belum terdapat
+            sistem yang secara menyeluruh menghubungkan proses pengambilan data (Big Data), pelatihan model
+            prediktif (Deep Learning), dan penyajian hasil kepada pengambil keputusan dalam satu ekosistem
+            operasional yang utuh dan dapat direproduksi [14].</li>
+        <li><strong>Sulitnya memahami alasan di balik keputusan model AI.</strong> Model <em>Deep Learning</em>
+            seringkali dianggap sebagai &ldquo;<em>kotak hitam</em>&rdquo; yang sulit dijelaskan cara kerjanya.
+            Untuk mengatasi hal ini, diperlukan metode <em>Explainable AI</em> (XAI) seperti SHAP
+            (<em>SHapley Additive exPlanations</em>) guna memvalidasi dan menjelaskan secara transparan fitur
+            mana yang paling berpengaruh terhadap hasil prediksi [15], [16].</li>
+    </ol>
+
+    <h2>1.3 Rumusan Masalah</h2>
+    <p>Berdasarkan permasalahan yang telah diidentifikasi, penelitian ini merumuskan lima pertanyaan penelitian
+        utama sebagai berikut:</p>
+    <ol class="rumusan">
+        <li>Bagaimana merancang dan membangun kerangka kerja <em>Business Intelligence</em> empat lapis yang
+            mampu menghubungkan secara mulus seluruh alur proses&mdash;mulai dari pengambilan data besar melalui
+            Binance API hingga tampilan <em>Decision Support Dashboard</em>&mdash;dalam satu ekosistem yang
+            dapat diuji ulang secara konsisten?</li>
+        <li>Di antara tiga algoritma yang diuji&mdash;LSTM, GRU, dan XGBoost&mdash;model mana yang menghasilkan
+            prediksi harga Bitcoin paling akurat berdasarkan metrik kesalahan numerik (RMSE, MAE, MAPE) ketika
+            dievaluasi dengan metodologi <em>Walk-Forward Validation</em> yang bebas dari risiko kebocoran
+            data?</li>
+        <li>Bagaimana karakteristik dan implikasi <em>tradeoff</em> yang terjadi antara model GRU (yang
+            dihipotesiskan unggul dalam ketepatan angka prediksi) dan model LSTM (yang dihipotesiskan unggul
+            dalam ketepatan arah pergerakan pasar) untuk mendukung konteks pengambilan keputusan investasi
+            yang berbeda?</li>
+        <li>Di antara 15 indikator teknikal yang direkayasa, fitur mana yang memberikan kontribusi prediktif
+            terbesar terhadap performa model, dan bagaimana hal tersebut dapat dijelaskan secara transparan
+            dan terukur kepada pengguna menggunakan nilai SHAP?</li>
+        <li>Bagaimana hasil prediksi model <em>Deep Learning</em> dapat diubah secara algoritmik menjadi
+            informasi risiko bisnis yang siap pakai&mdash;seperti <em>Sharpe Ratio</em>, <em>Value at
+            Risk</em>, dan <em>Win Rate</em>&mdash;dan disajikan dalam <em>BI Dashboard</em> yang dapat
+            langsung diinterpretasikan oleh para manajer investasi?</li>
+    </ol>
+
+    <h2>1.4 Tujuan Penelitian</h2>
+    <p>Sejalan dengan rumusan masalah yang telah ditetapkan, penelitian ini memiliki lima tujuan utama:</p>
+    <ol class="rumusan">
+        <li>Merancang, membangun, dan memvalidasi <em>kerangka kerja Business Intelligence empat lapis</em>
+            (4-Layer BI Framework) yang mengintegrasikan secara menyeluruh seluruh tahapan proses&mdash;dari
+            akuisisi Big Data, pembersihan dan transformasi data (ETL), komputasi prediktif, hingga
+            penyajian analitik&mdash;dalam satu ekosistem yang dapat direproduksi secara konsisten.</li>
+        <li>Melakukan perbandingan performa prediksi harga Bitcoin secara komprehensif dan berimbang antara
+            tiga model: LSTM, GRU, dan XGBoost, menggunakan dataset 43.788 rekaman per jam (2021&ndash;2026)
+            dengan metodologi <em>Walk-Forward Validation</em> yang ketat.</li>
+        <li>Mengidentifikasi dan menginterpretasikan <em>tradeoff</em> yang terjadi antara ketepatan angka
+            prediksi (presisi numerik: RMSE, MAE) dan ketepatan arah pergerakan pasar (<em>Win Rate</em>),
+            guna memberikan panduan model mana yang paling tepat untuk konteks investasi yang berbeda.</li>
+        <li>Mengevaluasi kontribusi prediktif dari masing-masing 15 fitur teknikal menggunakan metode SHAP
+            (<em>Explainable AI</em>), sehingga setiap keputusan model dapat dijelaskan secara ilmiah,
+            transparan, dan dapat dipahami oleh pengguna non-teknis sekalipun.</li>
+        <li>Mentransformasikan keluaran prediksi ke dalam metrik risiko finansial eksekutif&mdash;yang meliputi
+            <em>Sharpe Ratio</em> (ambang efisiensi &ge;1,0), <em>Value at Risk</em> (VaR 95%), dan
+            <em>Directional Win Rate</em> (ambang &ge;55%)&mdash;dan menyajikannya dalam prototipe
+            <em>BI Decision Support Dashboard</em> yang fungsional, siap digunakan langsung oleh
+            manajer investasi dan institusi keuangan.</li>
+    </ol>
+
+    <h2>1.5 Manfaat Penelitian</h2>
+    <p>Penelitian ini diharapkan memberikan kontribusi yang bermakna pada dua ranah utama:</p>
+    <p><strong>a. Manfaat Teoritis (Akademis)</strong></p>
+    <ul class="manfaat">
+        <li>Menghasilkan kerangka kerja <em>BI-ML Framework</em> yang terintegrasi dan dapat dijadikan rujukan
+            metodologis untuk penelitian lanjutan di bidang Informatika Finansial (<em>Financial Informatics</em>)
+            dan Analitika Big Data, khususnya dalam konteks aset digital.</li>
+        <li>Mengisi celah riset (<em>research gap</em>) dalam literatur melalui studi komparatif yang sistematis
+            dan ketat antara LSTM, GRU, dan XGBoost pada dataset Bitcoin berskala penuh dengan metodologi
+            <em>Walk-Forward Validation</em>.</li>
+        <li>Memberikan landasan empiris untuk menginvestigasi adanya <em>tradeoff</em> antara ketepatan
+            numerik (RMSE) dan ketepatan arah pasar (<em>Win Rate</em>) pada model <em>Deep Learning</em>
+            finansial&mdash;yang diharapkan menjadi kontribusi kritis bagi pengembangan strategi pemodelan
+            di masa mendatang.</li>
+        <li>Memperkaya literatur tentang penerapan SHAP sebagai alat <em>Explainable AI</em> (XAI) pada
+            prediksi aset digital yang sangat volatil, sehingga model tidak lagi menjadi &ldquo;kotak
+            hitam&rdquo; bagi para peneliti dan praktisi.</li>
+    </ul>
+    <p><strong>b. Manfaat Praktis (Industri)</strong></p>
+    <ul class="manfaat">
+        <li>Menyediakan prototipe <em>Decision Support Dashboard</em> yang dapat langsung diadaptasi oleh
+            manajer investasi, analis keuangan, dan institusi finansial untuk mendukung pengambilan keputusan
+            berbasis data (<em>data-driven decision making</em>) di pasar <em>cryptocurrency</em>.</li>
+        <li>Membantu lembaga keuangan dalam mengukur dan memitigasi risiko paparan aset kripto secara
+            kuantitatif melalui kalkulasi otomatis metrik risiko eksekutif (<em>Value at Risk</em> dan
+            <em>Sharpe Ratio</em>) yang dihasilkan dari model berperforma terbaik.</li>
+        <li>Menyediakan panduan metodologis yang dapat diadaptasi oleh praktisi teknologi dalam membangun
+            sistem prediksi harga kripto yang andal, transparan, dan terintegrasi dengan infrastruktur
+            <em>Business Intelligence</em> korporasi yang sudah ada.</li>
+        <li>Berkontribusi pada pengembangan ekosistem keuangan digital yang lebih cerdas di Indonesia,
+            sejalan dengan agenda transformasi digital nasional dan meningkatnya partisipasi investor
+            domestik di pasar aset kripto.</li>
+    </ul>
+
+    <h2>1.6 Batasan Penelitian</h2>
+    <p>Untuk menjaga fokus penelitian dan memastikan kedalaman analisis yang memadai, penelitian ini
+        menetapkan batasan-batasan ruang lingkup sebagai berikut:</p>
+    <ol class="rumusan">
+        <li><strong>Cakupan Aset:</strong> Penelitian ini berfokus secara eksklusif pada pasangan aset
+            BTC/USDT (Bitcoin terhadap <em>Tether</em>). Aset kripto lain seperti Ethereum (ETH) atau
+            Binance Coin (BNB) tidak dicakup, mengingat setiap aset memiliki karakteristik volatilitas yang
+            berbeda dan memerlukan kajian tersendiri.</li>
+        <li><strong>Sumber Data:</strong> Seluruh data historis diperoleh eksklusif dari <em>Binance Spot
+            API</em> dengan granularitas interval 1 jam (1h OHLCV), mencakup periode Maret 2021 hingga awal
+            2026, dengan total 43.788 rekaman data. Sumber data alternatif lain tidak diikutsertakan demi
+            menjaga konsistensi dan integritas data.</li>
+        <li><strong>Algoritma yang Dibandingkan:</strong> Studi komparatif dibatasi pada tiga algoritma:
+            LSTM dan GRU (sebagai model <em>deep learning</em> berbasis urutan waktu) serta XGBoost
+            (sebagai model <em>ensemble baseline</em>). Arsitektur lain seperti Transformer, CNN-LSTM,
+            atau model hibrida berada di luar cakupan penelitian ini.</li>
+        <li><strong>Fitur Input Model:</strong> Model dilatih menggunakan 15 fitur teknikal yang telah
+            ditetapkan: OHLC, Volume, MA-7, MA-21, RSI-14, MACD, MACD Signal, BB Upper, BB Lower,
+            BB Width, Log Returns, dan Rolling Volatility 24h. Faktor eksternal seperti sentimen media
+            sosial, data makroekonomi, atau data <em>on-chain</em> blockchain tidak diikutsertakan.</li>
+        <li><strong>Horizon Prediksi:</strong> Evaluasi performa model berfokus pada prediksi jangka pendek
+            dalam jendela validasi 168 jam (setara satu minggu ke depan). Prediksi untuk horizon jangka
+            menengah atau panjang berada di luar cakupan penelitian ini.</li>
+        <li><strong>Fungsi Sistem:</strong> Prototipe <em>BI Dashboard</em> yang dihasilkan berfungsi
+            sebagai <em>alat bantu pengambilan keputusan</em> (<em>decision support tool</em>), bukan
+            sebagai sistem perdagangan otomatis (<em>automated trading system</em>). Keputusan investasi
+            final sepenuhnya tetap berada di tangan pengguna manusia.</li>
+    </ol>
+
+    <h2>1.7 Sistematika Penulisan</h2>
+    <p>Proposal tesis ini disusun dalam enam bab yang saling berkesinambungan. Setiap bab memiliki peran
+        spesifik dalam membangun argumentasi penelitian secara logis dan sistematis:</p>
+    <div class="sistematika-item">
+        <strong>BAB I &ndash; PENDAHULUAN</strong> membangun fondasi argumentasi penelitian secara menyeluruh.
+        Bab ini menjelaskan mengapa Bitcoin menjadi objek penelitian yang relevan (Latar Belakang),
+        apa saja permasalahan yang belum terjawab (Identifikasi dan Rumusan Masalah), apa yang ingin
+        dicapai (Tujuan), apa manfaatnya (Manfaat), hipotesis apa yang diajukan, serta di mana batas
+        cakupan penelitian ini (Batasan).
+    </div>
+    <div class="sistematika-item">
+        <strong>BAB II &ndash; KAJIAN TEORITIS DAN TINJAUAN PUSTAKA</strong> menyajikan fondasi teori
+        yang menopang seluruh metodologi penelitian. Pembahasan mencakup tinjauan kritis terhadap
+        keterbatasan model tradisional (ARIMA, GARCH), evolusi arsitektur <em>Deep Learning</em> berbasis
+        gerbang memori (LSTM dan GRU), konsep <em>Efficient Market Hypothesis</em>, prinsip-prinsip Big
+        Data 5V dalam konteks aset digital, serta pemetaan celah penelitian (<em>research gap</em>) yang
+        diisi oleh studi ini.
+    </div>
+    <div class="sistematika-item">
+        <strong>BAB III &ndash; ARSITEKTUR SISTEM DAN METODOLOGI BI FRAMEWORK</strong> menguraikan
+        rancangan teknis lengkap dari kerangka kerja BI empat lapis yang diusulkan, mencakup: (1) akuisisi
+        dan ingesti data dari Binance API, (2) proses ETL dan normalisasi data, (3) rekayasa fitur teknikal
+        dan komputasi model prediktif (LSTM, GRU, XGBoost), serta (4) lapisan analitik BI dan
+        penyajian hasil pada <em>Decision Support Dashboard</em>.
+    </div>
+    <div class="sistematika-item">
+        <strong>BAB IV &ndash; REKAYASA FITUR DAN OPTIMASI MODEL</strong> membahas secara mendalam
+        proses rekayasa 15 fitur teknikal, formulasi matematika dari setiap indikator (MACD, RSI, Bollinger
+        Bands, Rolling Volatility), strategi optimasi hiperparameter melalui <em>Grid Search
+        Cross-Validation</em>, serta evaluasi kontribusi setiap fitur menggunakan metode SHAP
+        (<em>Explainable AI</em>).
+    </div>
+    <div class="sistematika-item">
+        <strong>BAB V &ndash; RENCANA PENGUJIAN DAN EVALUASI MODEL</strong> menguraikan skema pengujian
+        empiris menggunakan <em>Walk-Forward Validation</em>. Bab ini membahas rencana perbandingan metrik
+        performa teknis (RMSE, MAE, MAPE) antar model, analisis residual, dan transformasi keluaran
+        prediktif ke dalam metrik risiko bisnis (<em>Win Rate</em>, <em>Sharpe Ratio</em>, VaR). Secara
+        khusus, bab ini menginvestigasi <em>tradeoff</em> fundamental antara GRU dan LSTM dalam konteks
+        pengambilan keputusan investasi nyata.
+    </div>
+    <div class="sistematika-item">
+        <strong>BAB VI &ndash; KESIMPULAN DAN REKOMENDASI</strong> merupakan kristalisasi dari seluruh hasil penelitian yang menjawab rumusan masalah secara holistik. Bab ini menyimpulkan efektivitas integrasi model deep learning (LSTM/GRU) dalam kerangka kerja <em>Business Intelligence</em> untuk menekan ambang galat prediksi harga Bitcoin. Selain itu, bab ini secara kritis mereview bagaimana visualisasi <em>Explainable AI</em> (SHAP) dan metrik risiko (VaR) pada dashboard BI berhasil mengubah angka statistik mentah menjadi informasi strategis yang dapat dikonsumsi oleh investor ritel maupun institusi, serta memberikan rekomendasi arah pengembangan algoritma dan arsitektur sistem untuk skalabilitas di masa depan.
+    </div>
+    <div class="sistematika-item">
+        <strong>DAFTAR PUSTAKA</strong> memuat seluruh referensi yang digunakan, disusun sesuai format
+        sitasi IEEE dan bersumber dari jurnal-jurnal terindeks Scopus yang dapat diverifikasi.
+    </div>
+
+    <h1>BAB II: KAJIAN TEORITIS DAN TINJAUAN PUSTAKA</h1>
+    
+    <h2>A. Tinjauan Penelitian Terdahulu (State of the Art)</h2>
+    <p>Penelitian mengenai prediksi arah pergerakan harga mata uang kripto telah banyak dieksplorasi secara masif, khususnya dalam lima tahun terakhir (2021–2026). Literatur terkini membuktikan kecenderungan transisi dari pemodelan linier ke mesin cerdas. Seabe dkk. [12] melakukan pengujian ekstensif terhadap kemampuan algoritma <em>Long Short-Term Memory</em> (LSTM) dan <em>Gated Recurrent Unit</em> (GRU), dengan temuan dominasi performa varietas GRU karena kecepatannya dalam mengenali tren Bitcoin tanpa hambatan redundansi fitur. Secara spesifik, penelitian dari Jaquart dkk. [7] mempertegas bahwa komputasi berbasis <i>Deep Learning</i> memiliki kemampuan superior untuk menerjemahkan matriks ratusan parameter fundamental dari mata uang kripto ke dalam hasil regresi yang jauh lebih tajam.</p>
+
+    <p>Untuk memetakan rumpang penelitian (<em>research gap</em>) secara lebih sistematis, rangkuman tinjauan literatur terdahulu disajikan pada Tabel 2.1 di bawah ini.</p>
+
+    <div class="table-container" style="overflow-x: auto;">
+        <div class="figure-caption" style="text-align: left; margin-bottom: 5px;"><strong>Tabel 2.1</strong> Pemetaan Tinjauan Literatur Terdahulu (State of the Art)</div>
+        <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 13px; border: 1px solid #ccc;">
+            <thead>
+                <tr style="background-color: #1a3a6b; color: white; text-align: left; vertical-align: top;">
+                    <th style="width: 4%;">No.</th>
+                    <th style="width: 22%;">Judul Publikasi Ilmiah</th>
+                    <th style="width: 14%;">Peneliti (Tahun)</th>
+                    <th style="width: 20%;">Objek / Algoritma</th>
+                    <th style="width: 20%;">Temuan Utama</th>
+                    <th style="width: 20%;">Keterbatasan (Research Gap)</th>
+                </tr>
+            </thead>
+                                    <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><em>Forecasting and trading cryptocurrencies with machine learning</em><br><span style="color: #e53935; font-size: 0.9em; font-weight: bold;">(Terindeks: Scopus Q1)</span></td>
+                    <td>Sebastião &amp; Godinho (2021) [4]</td>
+                    <td style="text-align: justify;"><strong>Objek:</strong> Memprediksi probabilitas arah pergerakan aset kripto harian untuk mensimulasikan strategi <em>trading</em> riil tanpa metrik risiko manajerial.<br><strong>Algoritma:</strong> <em>Machine Learning</em> klasik (Random Forest, SVM, Regresi Logistik).</td>
+                    <td style="text-align: justify;"><strong>Temuan Utama:</strong> Algoritma klasifikasi <em>Machine Learning</em> terbukti dapat mengidentifikasi pola tren arah pergerakan aset kripto. Secara spesifik, model Random Forest menghasilkan akurasi arah terprediksi (<em>Directional Accuracy</em>) yang stabil di atas 55%, yang secara material mampu memberikan nilai keunggulan kompetitif dibandingkan strategi pasif <em>Buy-and-Hold</em> ketika dieksekusi pada kondisi pasar kripto yang bervolatilitas normal.</td>
+                    <td style="text-align: justify;"><strong>Keterbatasan (Gap ke Tesis):</strong> Model bersifat statis dan gagal menangkap dependensi waktu jangka panjang (<em>Long-Memory effects</em>). Selain itu, ketiadaan metrik kelayakan risiko bisnis (seperti <em>Value at Risk</em>) menjadikan hasil model terisolasi. Hal ini memperkuat justifikasi tesis untuk memprioritaskan model sekuensial (LSTM/GRU) yang terintegrasi pada parameter mitigasi risiko dalam kerangka <em>BI Dashboard</em>.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><em>Applications of deep learning in stock market prediction: Recent progress</em><br><span style="color: #e53935; font-size: 0.9em; font-weight: bold;">(Terindeks: Scopus Q1)</span></td>
+                    <td>Jiang (2021) [17]</td>
+                    <td style="text-align: justify;"><strong>Objek:</strong> Kajian komprehensif terkait efektivitas arsitektur <em>Deep Learning</em> dalam memodelkan deret waktu finansial yang menampakkan fluktuasi turbulen yang ekstrem.<br><strong>Algoritma:</strong> RNN, CNN, <em>Long Short-Term Memory</em> (LSTM).</td>
+                    <td style="text-align: justify;"><strong>Temuan Utama:</strong> Arsitektur <em>Deep Learning</em>, khususnya <em>Long Short-Term Memory</em> (LSTM), diidentifikasi sebagai standar emas (<em>gold standard</em>) untuk data runtun waktu finansial yang fluktuatif. Mekanisme gerbang daya ingat di dalam sel kerjanya sukses terbukti secara empiris dan matematis dapat meredam gangguan kebocoran gradien (<em>vanishing gradient problem</em>), menjadikannya sangat andal dan superior di dalam mengekstraksi serta menjaga memori memanjang terhadap dependensi pola sejarah pergerakan tren pasar dengan rentang masa lalu yang sangat jauh di belakang (<em>Long-Memory effects</em>).</td>
+                    <td style="text-align: justify;"><strong>Keterbatasan (Gap ke Tesis):</strong> Kompleksitas arsitektur LSTM umumnya menyebabkan lambatnya efisiensi penyeimbangan bobot komputasi untuk rentang data berfrekuensi tinggi (seperti rekaman per jam). Mengisi rumpang tersebut, tesis ini mendesain eksperimen komparasi langsung performa algoritmik LSTM ini melawan varian mutakhirnya yang lebih efisien, yaitu algoritma GRU pada eksekusi akselerasi tinggi.</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><em>Short-term bitcoin market prediction via machine learning</em><br><span style="color: #e53935; font-size: 0.9em; font-weight: bold;">(Terindeks: Scopus Q1)</span></td>
+                    <td>Jaquart dkk. (2021) [7]</td>
+                    <td style="text-align: justify;"><strong>Objek:</strong> Analisis prediktibilitas asimetris pada rentang pasar Bitcoin menggunakan pangkalan log teknikal historis dalam horizon seketika pendek (1–24 jam).<br><strong>Algoritma:</strong> Klasifikasi dan Regresi Ansambel.</td>
+                    <td style="text-align: justify;"><strong>Temuan Utama:</strong> Prediksi asimetris berfrekuensi tinggi memegang peran amat krusial di turbulensi pasar Bitcoin masa kini. Pemanfaatan rekam jejak observasi berbasis indikator dasar teknikal pada interval sangat sempit (terutama dalam kerangka waktu proyektif 1 jam hingga paling maksimal di kisaran 24 jam) terbukti nyata dan diakui secara definitif sebagai variabel terkuat dalam upayanya meminimalkan derajat absolut dari tingkat rasio kesalahan performa peramalan (<em>Predictive Error Rate</em>) dan mutlak membantu menelan kebisingan (<em>noise</em>) data pergerakan semu jangka pendek dibandingkan hanya merawat formulasi model ekonometrik regresi konvensional biasa pada rentang pencatatan panjang harian bulanan.</td>
+                    <td style="text-align: justify;"><strong>Keterbatasan (Gap ke Tesis):</strong> Implementasi menggunakan prosedur murni evaluasi statis (<em>K-Fold Cross Validation</em>) memicu cacat kebocoran data (<em>data leakage</em>) dari masa depan ke area pemodelan historis masa lalu. Menuntaskan limitasi tersebut, tesis ini secara ketat mempersyaratkan metodologi absolut <em>Walk-Forward Validation</em> demi menjaga sterilitas matriks proyektif DSS (<em>Decision Support System</em>).</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><em>Prediction of cryptocurrency returns using machine learning</em><br><span style="color: #e53935; font-size: 0.9em; font-weight: bold;">(Terindeks: Scopus Q1)</span></td>
+                    <td>Akyildirim dkk. (2021) [18]</td>
+                    <td style="text-align: justify;"><strong>Objek:</strong> Investigasi tingkat akurasi prediksi derivatif kripto melalui isolasi kerugian margin serta reduksi parameter pencilan yang mendistorsi volatilitas sesaat.<br><strong>Algoritma:</strong> XGBoost (<em>Extreme Gradient Boosting</em>).</td>
+                    <td style="text-align: justify;"><strong>Temuan Utama:</strong> Konsistensi penggunaan algoritma berakar landasan perakitan pohon keputusan analitik prediktif, dengan kerangka pengkondisian <em>Extreme Gradient Boosting</em> (XGBoost), dipastikan secara definitif menyajikan stabilitas komputasi tingkat tinggi dan membuktikan diri memiliki kapabilitas dominan internal yang luar biasa kokoh untuk mengeksekusi mandiri penalti matematis pada beban kompleksitas model parametrik (<em>built-in functional penalty mechanism</em>). Penemuan eksklusif di eksekusinya memastikan performa perakitan matematis ansambel ini menjadi salah satu tembok pertahanan rasio presisi paling andal dalam melawan maupun mengenali secara agresif potensi anomali pencilan data sesat harga pergerakan nilai pasar kripto ekstrem, menjadikannya sukses mencetak isolasi sempurna dari sindrom hafalan (<em>Overfitting limit elimination</em>).</td>
+                    <td style="text-align: justify;"><strong>Keterbatasan (Gap ke Tesis):</strong> Algoritma beroperasi secara tertutup (<em>Black-Box</em>), melarang visualisasi kausalitas fungsional kepada pengguna. Pada tesis ini, parameter murni akurasi XGBoost diarahkan menjadi fondasi <em>Baseline Anchor</em> pelompat ukur pembanding terhadap kemampuan dekonstruktif sel syaraf GRU/LSTM yang hasil keputusannya diterjemahkan logis pada lapisan visual interpretatif independen <em>Explainable AI</em> (SHAP).</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><em>How do economic policy uncertainty and geopolitical risk drive Bitcoin volatility?</em><br><span style="color: #e53935; font-size: 0.9em; font-weight: bold;">(Terindeks: Scopus Q1)</span></td>
+                    <td>Ben Nouir dkk. (2023) [6]</td>
+                    <td style="text-align: justify;"><strong>Objek:</strong> Pemodelan efek deterministik dari guncangan asimetris kepanikan dan risiko konflik geopolitik global bersenjata terhadap rentang fluktuasi nilai ekuilibrium pasar Bitcoin.<br><strong>Algoritma:</strong> Regresi Ekonometrika <em>Vector Autoregression</em> (VAR) klasik.</td>
+                    <td style="text-align: justify;"><strong>Temuan Utama:</strong> Karakteristik pergerakan valuasi dasar fundamental pasar investasi jaringan kriptografi digital sekuat Bitcoin dipastikan nyatanya tidak sekadar berjalan seimbang dikendalikan dorongan rasio teknis persimpangan harga di wilayah batas teritori resistensi pasar; sangat jelas bahwa ia rentan jatuh pada dominasi tekanan kepanikan makro deterministik oleh paparan sentimen pemberitaan negatif luar. Pengukuran menampakkan fakta tegas bahwa laju inflasi krisis ekonomi maupun percikan risiko ketegangan sentimen insiden penyebaran geopolitik tempur nyatanya mampu menghancurkan seketika batas keseimbangan harga; guncangan skala masif berita determinan level global ini diposisikan fatal dalam sekejap karena begitu rentan terbukti potensial meremukkan stabilitas hukum dan batasan pilar pemikiran logis mutlak asumsi fondasi klasik yang diperjuangkan dalam literatur pakem keilmuan akademis manajemen keuangan tentang definisi absolut Hipotesis Pasar Efisien (EMH/<em>Efficient Market Hypothesis</em>) – memutar balik rasionalitas harga yang diyakini seharusnya murni bergerak searah paralel dengan garis penemuan rasionalitas distribusi penyampaian keakuratan informasi.</td>
+                    <td style="text-align: justify;"><strong>Keterbatasan (Gap ke Tesis):</strong> Penelitian yang terbatas hanya mendeteksi fenomena empiris melalui garis linier secara pasif dan sama sekali instrumen perhitungan mitigasi manajerial kerugian. Celah struktural tersebut akan dibongkar oleh tesis ini secara definitif dengan meluncurkan alat mitigasi pelaporan perlindungan permodalan nyata proyektif harian terarah (seperti angka absolut kerugian <em>Value at Risk 95%</em>) yang diterjemahkan logis pada visual BI Dashboard.</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><em>Forecasting cryptocurrency prices using LSTM, GRU, and bi-directional LSTM</em><br><span style="color: #f39c12; font-size: 0.9em; font-weight: bold;">(Terindeks: Scopus Q2)</span></td>
+                    <td>Seabe dkk. (2023) [12]</td>
+                    <td style="text-align: justify;"><strong>Objek:</strong> Evaluasi keandalan struktur memori derivatif yang berfokus mendegradasi error matematis pada pembandingan kalkulasi logaritma tingkat pengembalian nilai harian kripto.<br><strong>Algoritma:</strong> LSTM konvensional, penyesuaian sel rute GRU, <em>Bi-Directional</em> LSTM.</td>
+                    <td style="text-align: justify;"><strong>Temuan Utama:</strong> Komparasi uji teknis <em>head-to-head</em> secara mendalam memutar sistem rasio navigasi adaptif dari selang pemrosesan sel penangkap memori jaringan iteratif canggih turunan fungsi <em>Recurrent Neural Network</em> (RNN) berhasil mencapai putusan konklusif. Kerangka desain rasio modifikasi matematis sel pengalih jaringan pembuka dan penutup relasi pada gerbang struktur terpadu algoritme iterasi rantai <em>Gated Recurrent Unit</em> (GRU) divalidasi sangat tangguh lantaran dinilai amat cemerlang membuktikan secara pasti kemampuannya meraih eskalasi fase tingkat pemusatan titik ukur ekuilibrium persamaan matematis (<em>Mathematical Convergence Rate Constraint Optimization</em>) secara jauh lebih agresif pada penggunaan rasio penyerapan konsumsi energi operasional yang juga luar biasa sangat efisien bila dibenturkan berdasar jumlah kalkulasi waktu pelatihannya. Lebih dari sekadar itu, kemampuan komparatif kinerja murni ini dipastikan amat solid tanpa menunjukkan adanya titik kelemahan berarti, dengan kata lain secara gamblang ia menghasilkan rentang rasio deviasi angka akurasi komputasional deviasi murni yang dipastikan setara, saling menempel tangguh bersaing bahu-membahu dalam pertarungan persamaannya, atau seringkali secara ajaib tercatat melampaui capaian metrik batas absolut level pencapaian tertinggi dari kinerja kerumitan arsitektur sel berlapis fungsional model pendahulunya yaitu LSTM.</td>
+                    <td style="text-align: justify;"><strong>Keterbatasan (Gap ke Tesis):</strong> Riset terjebak doktrin pencapaian absolut simpangan murni (mengutamakan sekadar persentase RMSE/MAE secara sepihak) dengan mengabaikan matriks penerimaan ritel investor nyata. Kesadaran logis ini menjadi acuan mutlak tesis Anda merekayasa eksekusi <em>Trade-Off Accuracy vs Profit Precision</em> yang mempertimbangkan juga proporsi pergerakan tren pasar prediksi (<em>Win Rate Directional Accuracy</em>) bukan sekedar pada jarak murni prediktif harga.</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><em>Explainable artificial intelligence modeling to forecast bitcoin prices</em><br><span style="color: #e53935; font-size: 0.9em; font-weight: bold;">(Terindeks: Scopus Q1)</span></td>
+                    <td>Goodell dkk. (2023) [15]</td>
+                    <td style="text-align: justify;"><strong>Objek:</strong> Integrasi persentase kalkulasi kooperatif matematika aljabar permainan teoritis untuk mengungkap indikator absolut pada bobot rahasia keputusan pasar.<br><strong>Algoritma:</strong> Antarmuka Metodologi Visualisasi XAI <em>SHapley Additive exPlanations</em> (SHAP).</td>
+                    <td style="text-align: justify;"><strong>Temuan Utama:</strong> Pionir implementasi metodologi dekonstruktif canggih di bawah panji paradigma <em>Explainable Artificial Intelligence</em> (XAI), melalui pemanfaatan langsung dan menyeluruh dari perhitungan konvergen visualisasi kooperatif landasan turunan struktur algoritme pakem permainan ekonomi rasional dalam formulasi <em>SHapley Additive exPlanations</em> (SHAP), divalidasi amat sempurna dan cemerlang di arena eksperimentalnya sebab sukses memutus mata rantai kendala kronis penderitaan analisis isolasi pekat tabir sifat kerangka dasar proses fungsional otak rahasia dari <em>'Black-Box'</em> model arsitektur <em>Deep Learning</em>. Parameter kooperatif SHAP terlahir membongkar dominasi struktur pengambilan porsi keputusan jaringan sel buatan yang akhirnya membuktikan mutlak kejelasan hukum determinasi bahwa penekanan indeks kalkulasi rasionalitas derivat pada rekayasa sinyal volume maupun rekayasa momentum matematis interaksi transaksi harga yang bergerak algoritmik dominan menyetir nilai masa depan, meredam bobot dominasi nilai harga pasif teknis yang secara statis tercatat terlampau tenang dalam buku bursa log dasar pembukaan komparatif di pasar.</td>
+                    <td style="text-align: justify;"><strong>Keterbatasan (Gap ke Tesis):</strong> Formulasi XAI diterapkan bersifat terbatas meratifikasi kapabilitas parsial algoritma mandiri tunggal semata, dan menolak berintegrasi. Justifikasi ilmiah dari posisi tesis ini meledakkan cangkang parsial itu, menetapkan perakitan rasio SHAP sebagai wasit interpretatif holistik jembatan perbandingan penentu persaingan keras performa memori (GRU vs LSTM) yang disajikan dan menyatu terpadu interaktif proaktif para lapisan terminal antarmuka sentral eksekutif fungsional intelijensi BI nyata.</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><em>A machine learning based predicting framework for cryptocurrency price</em><br><span style="color: #e53935; font-size: 0.9em; font-weight: bold;">(Terindeks: Scopus Q1)</span></td>
+                    <td>Chen dkk. (2022) [19]</td>
+                    <td style="text-align: justify;"><strong>Objek:</strong> Membuat kerangka hibrida prediksi yang menggabungkan dekomposisi data runtun waktu multi-skala guna mendeteksi tren makro dari fluktuasi Bitcoin. <br><strong>Algoritma:</strong> Hibrida <em>Long Short-Term Memory</em> (LSTM) dan optimisasi algoritma kelelawar (<em>Bat Algorithm</em>).</td>
+                    <td style="text-align: justify;"><strong>Temuan Utama:</strong> Teknik ekstraksi dekomposisi sinyal data kuantitatif pada fase pra-pemrosesan diakui memiliki keunggulan fundamental merapikan dan menghaluskan gelombang turbulensi deret waktu dengan sangat efektif. Modul perpaduan arsitektur model hibrida ini juga telah didokumentasikan berhasil mencatat pencapaian signifikansi impresif pada penyusutan merata rasio perhitungan absolut kerugian dalam deviasi matriks ukur evaluasi galat prediksi fungsional (RMSE maupun MAPE), dibandingkan dengan rasio hasil unjuk model jaringan pembelajar dasar LSTM standar tatkala dijalankan tunggal terisolir.</td>
+                    <td style="text-align: justify;"><strong>Keterbatasan (Gap ke Tesis):</strong> Penambahan layer algoritma metaheuristik menyebabkan durasi komputasi yang teramat bengkok dan memakan waktu panjang di siklus fasilitasi tahap pembelajaran arsitektur model, sehingga model ini sama sekali tertinggal dan dinilai kurang begitu responsif gesit manakala diterjunkan dalam ekosistem sistem produksi terpasang analitik waktu riil harian (<em>real-time pipeline</em>). Sebagai titik penyempurnaan esensial, metodologi konseptual pada usulan tesis ini merekayasa secara matang langkah perbaikan komputasinya dengan mendirikan fondasi struktur pilar algoritmik dari fungsionalitas turunan tunggal GRU yang digeser setelan <em>hyperparameter</em> internal utamanya, sehingga diyakini mumpuni dalam mensterilkan penanganan ketangkasan pengeluaran analisis kecepatan prediktif harian namun terus setia dalam penjagaan presisi tertinggi efisiensi parameter laporan interaktif eksekutif visualisasi <em>BI Dashboard</em> haptic secara proaktif murni.</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td><em>Cryptocurrency trading using machine learning</em><br><span style="color: #e53935; font-size: 0.9em; font-weight: bold;">(Terindeks: Scopus Q1)</span></td>
+                    <td>Koker &amp; Koutmos (2020) [20]</td>
+                    <td style="text-align: justify;"><strong>Objek:</strong> Analisis mendalam atas pergerakan nilai tukar pada representasi himpunan lima denominasi instrumen kripto berkapasitas likuiditas dominan global (termasuk Bitcoin), yang bermuatan misi memaksimalkan potensi ekstraksi proyeksi retur hasil pundi uang logis dengan penerapan beralih posisi simpan secara otonom antara rasio posisi <em>long</em> (pembelian menahan) dan <em>short</em> (jual bertukar).<br><strong>Algoritma:</strong> <em>Support Vector Machine</em> (SVM), Random Forest, <em>Deep Neural Networks</em> (DNN).</td>
+                    <td style="text-align: justify;"><strong>Temuan Utama:</strong> Implementasi jajaran pangkalan model determinasi canggih dengan lapisan perintis kecerdasan kompleks semodel <em>Deep Neural Networks</em> (DNN) dan deretan perakitan algoritmis ensembel kokoh <em>Random Forest</em> dengan jelas diuji tervalidasi secara sangat adaptif dan piawai pada kemampuan fungsional analitik penyesuaian penentuan pergeseran instan tebakan pergerakan rasio ketetapan prediktif penyesuaian pasar teknikal absolut seketika (<em>superior market timing synchronization capability</em>) saat pergeseran rotasi drastis siklus perpindahan kutub kecenderungan transisional berisiko dalam instrumen iklim (terdeteksi saat patahan dari rel <em>Bullish</em> agresif menyentuh dominasi tarikan terjun curam arus <em>Bearish</em> momentum). </td>
+                    <td style="text-align: justify;"><strong>Keterbatasan (Gap ke Tesis):</strong> Konsep metodologisnya lumpuh akibat absen total dalam menghadirkan instrumen pendeteksi indikator parameter mitigasi toleransi perhitungan batas ambang batas pelindung rasio empiris manajerial ekuitas moneter modal riil penyertaan nominal dana investasi dari figur ritel pengguna maupun kelas profil investor yang terekspos ketidakpastian seketika. Tesis ini dengan presisi komputasi menancapkan penutupan langsung terhadap distorsi kelemahan rumpang struktural absolut literatur tersebut demi tak lekang bertumpu pasif terhadap sekadar besaran akurasi metrik teknologinya murni; lebih dari itu secara sengaja direkayasakan sebuah kerangka rakit fusi operasional nyata utilitas fitur sistem penilai hitungan matriks ekspektasi hasil moneter logis kalkulator konversi nominal asli rupiah, perbandingan penarikan margin ekuitas rasio absolut perlindungan risiko rentang (<em>Drawdown metrics</em>), dan utilitas hitungan pertahanan batas persimpangan kuantitatif terstandarisasi industri <em>Value at Risk (VaR)</em> integral. Seluruh pilar jembatan pemrosesan mitigasi analitik rasio perhitungan ini nantinya saling bersambung di satu mesin simfoni komputasi logis cerdas pelaporan sentral di balik integrasi keputusan visual mesin model haptic penampil interaktif yang dinamis berdetak seketika waktu nyata, terwujud utuh mandiri bersama arsitektur terluar penampil kapabilitas murni algoritma pelacak sentral pendorong otak utama berkecepatan komputasi prediktif presisi akurat berbasis fungsi analitik tangguh <em>Machine Learning</em>.</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td><em>Predicting future volatility of cryptocurrencies using LSTM and GRU deep learning algorithms</em><br><span style="color: #f39c12; font-size: 0.9em; font-weight: bold;">(Terindeks: Scopus Q2)</span></td>
+                    <td>Patel dkk. (2020) [21]</td>
+                    <td style="text-align: justify;"><strong>Objek:</strong> Formulasi pemodelan prediktif kuantitatif menggunakan penarikan skema regresi bivariat mendalam khusus membongkar kerangka pemproyeksian metrik varians perambatan turbulensi indeks nilai ketidakpastian kepanikan harian parameter perbaikan volatilitas dinamis pergerakan di lantai perdagangan aset instrumen kripto mapan (mengikutsertakan sampel korelasi pada rantai kripto Litecoin dan pilar utama nilai ekuitas Bitcoin), dikalkulasi dan diarsip memfokus menambang seluruh asupan padat eskalasi jejak basis sumber ekstraksi frekuensi fluktuatif pertukaran tawar matriks data rekam interval logaritma harian padat.<br><strong>Algoritma:</strong> Varian klasik arsitektur pembelajaran mendalam derivatif modifikasi syaraf sel berurut kompleks berbasis memori fungsional absolut LSTM dan kembaran rel turunan simplifikasinya, fungsi jaringan otak buatan modifikasi sel pengalih efisien rantai model terpusat (GRU). </td>
+                    <td style="text-align: justify;"><strong>Temuan Utama:</strong> Eksperimen murni pada pembenturan silang pertahanan struktur di tingkat akurasi komputasi mendalam di antara fungsionalitas kedua sistem komputasi adaptif cerdas ini nyatanya berkesimpulan terbukti membentangkan parameter kapabilitas deteksi matriks absolut yang benar-benar secara definitif tervalidasi amat tajam seakan berjalan secara solid seimbang dengan akurasi memuaskan, mematahkan keraguan teknologinya. Pada kedalaman detail laporan pembuktian eskalasi spesifiknya secara ilmiah tak lagi bisa diingkari berhasil mengkonfirmasi postulat efisiensi struktur; modifikasi konstruktif rekayasa penyederhanaan kerangka rasio fungsional dari rel arsitektur dalam balutan susunan ringkas komputasi rasional GRU dinilai jauh lebih unggul, lantaran secara fantastis ia membuktikan tajinya telah berhasil unjuk kehebatan performa merobek efisiensi beban pengolahan dan efisiensi konsumsi berat memori sirkuit matematis komputasi analitik, menekan konsumsi porsi pengingat memori dan pada akhirnya dinobatkan piawai melahirkan keekstreman deviasi kinerja rasio kalkulasi pemrosesan pada ketepatan akurasi metrik pendaratan rasio batas pengawasan parameter selisih angka nilai toleransi peramalan margin pada pencapaian absolut perbandingan <em>Mean Absolute Error</em> (MAE) teramat stabil; bahkan parameter akhir presisi deviasi pengalih model ringan penekan efisiensi komputasi dari susunan matematis kompleks rantai iterasi sel model arsitektur <em>Gated Recurrent</em> modifikasi penyederhanaan sel model pendahulunya itu tercatat menyaingi, berdiri kokoh ketat selevel, meredam selisih deviasi angka ketidakpastian hitung proyeksi tanpa menunjukkan kelemahan deterministik berarti dan senantiasa membayang sempurna mendampingi keunggulan akurasi struktur logis lapisan yang secara masif begitu tebal mendalam dari rancang pemrosesan sel rel syaraf pelindung rahasia komputasi pada fungsi iterasi penyaring pendahulunya LSTM.</td>
+                    <td style="text-align: justify;"><strong>Keterbatasan (Gap ke Tesis):</strong> Terdapat celah dalam riset ini di mana penilaian performa masih diukur lewat parameter pengamatan akurasi internal algoritma dan absolut tanpa memperluas penelusurannya ke fusi logis parameter pengkayaan hasil teknikal. Tesis ini menghadirkan perombakan dari riset referensinya yakni mendemonstrasikan jembatan fungsional yang mensyaratkan pemanfaatan kombinasi injeksi terpadu teknik harian canggih seperti indikator kompleks pendorong volatilitas interaktif rekayasa penggabungan fitur kombinasi sinyal dinamis pasar sekelas SMA (<em>Simple Moving Average</em>), varian tren persimpangan indikator rel harga pada rekam data sinyal komputasi rata-rata konvergen MACD, fluktuasi ketahanan resistensi impuls persimpangan absolut garis penawaran pembelanja persetujuan tawar interaksi murni indeks rasio momentum kekuatan batas logis pasar murni relasional momentum penawaran dan pembelian tawar sebatas harian interval osilator angka batas konvergen momentum tren RSI (<em>Relative Strength Index</em>). Integrasi penempatan teknikal multidimensi inilah yang dikerahkan menyatu dengan alunan pengambil keputusan jaringan komputasinya dan diramu seretak mendalam di pusat presentasi rasio hasil performa analitik dari penarik antarmuka sistem intelijensi bisnis.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Sintesis Kesenjangan Penelitian (Research Gap Synthesis)</h3>
+    <p style="text-align: justify;">Berdasarkan pemetaan literatur komprehensif terhadap sepuluh publikasi internasional bereputasi di atas, dapat disimpulkan bahwa mayoritas penelitian terdahulu umumnya berfokus pada optimasi metrik akurasi model algoritmik di dalam lingkungan laboratorium yang terisolasi. Terdapat kesenjangan yang nyata di mana hasil komputasi tersebut seringkali berhenti sebagai angka statistik semata, tanpa adanya jembatan konversi yang dapat mentransformasikan hasil prediksi menjadi wawasan strategis yang siap dikonsumsi oleh pengambilan keputusan riil bagi investor maupun manajer portofolio.</p>
+
+    <p style="text-align: justify;">Lebih lanjut, literatur yang ada cenderung bersifat parsial dalam pembahasannya. Penelitian yang menonjol dalam transparansi kecerdasan buatan (<em>Explainable AI</em>) seringkali terpisah dari kajian yang membahas dampak guncangan geopolitik maupun mitigasi risiko manajerial. Ketiadaan integrasi sistematis antara kekuatan prediktif algoritma sekuensial (seperti LSTM dan GRU) dengan mekanisme interpretasi fitur (SHAP) dan instrumen perlindungan modal fungsional (<em>Value at Risk</em>) menciptakan rumpang (<em>gap</em>) struktural dalam literatur sistem pendukung keputusan aset kripto saat ini.</p>
+
+    <p style="text-align: justify;"><strong>Di sinilah letak kebaruan (<em>novelty</em>) dan kontribusi utama dari penelitian ini.</strong> Tesis ini hadir untuk merakit ketiga entitas ilmiah yang sebelumnya terpisah menjadi satu ekosistem yang terpadu secara holistik. Penelitian ini tidak hanya mengadu performa antara arsitektur memori jangka panjang (LSTM vs GRU) dan model ansambel (XGBoost), tetapi juga melakukan interogasi mendalam melalui lensa <em>Explainable AI</em> untuk mengungkap kausalitas di balik keputusan model tersebut.</p>
+
+        <p style="text-align: justify;">Sebagai puncaknya, seluruh luaran komputasi prediktif dan analitik tersebut akan diorkestrasi ke dalam sebuah <em>Business Intelligence Dashboard</em> yang dinamis. Sistem ini bertugas menerjemahkan kompleksitas data prediktif menjadi parameter mitigasi risiko konkret, seperti radar <em>Value at Risk</em> (VaR) harian, yang disajikan secara interaktif. Rancang bangun <em>End-to-End Predictive Analytical Decision Support System</em> ini merupakan upaya mandiri yang menutupi kelemahan parsial pada riset-riset terdahulu, sekaligus menawarkan standar baru dalam pemanfaatan teknologi kecerdasan bisnis untuk aset digital Bitcoin.</p>
+
+<h2>B. Karakteristik Aset Digital dan Fundamen Cryptocurrency</h2>
+    <p>Bitcoin merupakan pelopor mata uang digital desentralistik yang beroperasi di atas buku besar publik terdistribusi (<em>blockchain</em>) yang diamankan melalui protokol kriptografi konsensus <em>Proof-of-Work</em> [1]. Berbeda dengan mata uang konvensional (<em>fiat</em>) yang secara ketat diregulasi oleh otoritas perbankan sentral, stabilitas ketahanan nilai intrinsik Bitcoin sepenuhnya dikendalikan oleh mekanisme independen tarik-ulur kekuatan pasar terbuka (<em>supply and demand</em>). Absennya entitas pengendali sentral ini melahirkan kelas aset keuangan alternatif baru yang menawarkan prospek imbal hasil historis yang sangat atraktif bagi investor ritel, namun harus dibayar mahal dengan siklus volatilitas fluktuatif ekstrem penuh ketidakpastian. Tinjauan akademis ekstensif menjabarkan gamblang bahwa dinamika pergerakan spekulatif hariannya amat sensitif tersulut oleh sentimen psikologis makro, menjadikannya objek studi prediksi kuantitatif yang menantang bagi arsitektur model empiris statistik awam [2].</p>
+
+    <h2>C. Analisis Kritis Hipotesis Pasar Efisien (EMH) pada Aset Kripto</h2>
+    <p>Dalam sejarah tataran teori tata kelola investasi, harga aset diasumsikan selalu berjalan seimbang dan secara rasional mencerminkan seluruh berita fundamental yang tersedia di pasar publik bebas. Konsep ekuilibrium organik ini dipopulerkan melalui definisi utuh <em>Efficient Market Hypothesis</em> (EMH) oleh Fama [14]. Meskipun model keseimbangan klasik ini valid untuk instrumen pasar modal mapan jangka panjang, dinamika aset digital modern menunjukkan fakta struktural yang bertentangan. Karakteristik likuiditas Bitcoin ditandai oleh dominannya anomali penyimpangan asimetris impulsif (<em>volatile shocks</em>), gelombang kepanikan ritel masal (FOMO), serta fenomena efek pengulangan tren riwayat ekor harga (<em>Long-Memory residual effects</em>). Kumpulan ketidakwajaran distribusi tersebut membongkar kelemahan krusial kalkulator ekonometrika linier sederhana—mempertemukan industri finansial dengan jalan buntu resolusi prediktif [9]. Menyikapi turbulensi data ekstrim tersebut, riset yang berupaya mereduksi kebisingan rasio (<em>market noise</em>) wajib melepaskan tradisi distribusi empiris murni. Strategi regresi modern berbasis <em>ensemble learning decision-trees</em> bergradien tinggi, seperti algoritma revolusioner XGBoost yang dipatenkan oleh Chen dan Guestrin [22], diramu dalam riset ini sebagai baris pertahanan terluar algoritma rujukan acuan mula (<em>robust standard baseline estimator</em>).</p>
+
+    <h2>D. Evolusi Arsitektur Deep Learning: Dari RNN hingga LSTM dan GRU</h2>
+    <p>Pendekatan algoritma struktur Jaringan Saraf Tiruan (JST/<em>Neural Network</em>) generasi perdana menampakkan cacat matematis fatal apabila diuji coba mengalkulasi prediksi serangkaian runtunan indeks berdimensi puluhan ribu baris pergerakan waktu. Terjadi fenomena pengecilan gradien bobot saraf menuju batas angka nol (<em>Vanishing Gradient Problem</em>), yang menyebabkan mesin seketika "menderita amnesia" temporal dan melupakan wujud pergerakan makro terdahulu. Transformasi evolusi terbesar dilahirkan saat arsitektur saringan saraf berlapis LSTM diperkenalkan ke dunia oleh Hochreiter dan Schmidhuber [10]. Modul khusus LSTM diberikan mandat otonomi sirkuit untuk menunda penghapusan, menerima wujud pergerakan memori krusial, hingga mengunci dan melepaskan relevansi harga secara sekuensial. Di babak selanjutnya, kemajuan radikal diciptakan dengan arsitektur GRU oleh Cho dkk. [11], yang memicu pemangkasan masif dari redundansi sirkuit kompleks milik sang kakak (LSTM) guna merevolusi tingkat kecepatan komputasi tanpa mencederai rasio prediksi nilai pasar.</p>
+
+    <h2>E. Paradigma Explainable AI (XAI) dalam Intelegensi Bisnis Finansial</h2>
+    <p>Model kecerdasan buatan super canggih acapkali menghasilkan misteri logika internal tanpa panduan pelacakan (<em>Black-box problem</em>), meredupkan simpati dan kepercayaan para analis risiko pengambil keputusan terhadap integrasinya [15]. Kelemahan struktural transparansi model ini berhasil didekonstruksi melalui penetrasi formula koefisien dasar SHAP (<em>SHapley Additive exPlanations</em>) dari Lundberg dan Lee [16]. Prinsip nilai permainan terbagi ini memungkinkan kalkulasi pembuktian persentase andil absolut dari tiap komponen input harga (seperti RSI atau volume harian) dalam memajukan akurasi prediksi. Ekosistem kejelasan terpadu (XAI) ini adalah ruh fundamental dari tata visualisasi <em>Business Intelligence Framework</em> dalam penelitian ini.</p>
+
+    <h2>F. Arsitektur Business Intelligence (BI) untuk Prakiraan Deret Waktu Finansial</h2>
+    <p>Sektor <em>Business Intelligence</em> (BI) tataran korporat modern harus merombak fundamental wujudnya dari sekadar kerangka pelaporan statistik retrospektif menjadi arsitektur penghasil peringatan proaktif (<em>Predictive Analytics Machine</em>). Khusus di dalam rahim manajemen aset deret waktu finansial (<em>financial time-series</em>) berkapasitas sangat tinggi, pangkalan kerangka BI mensyaratkan beroperasinya lapisan penyaring komputasi matematis berlapis—semacam modul arsitektur dalam yang secara terverifikasi ampuh melacak fluktuasi indeks lintas waktu abstrak pada rentang pertukaran emas [23]. Merakit sinkronisasi pengenalan memori sejarah yang luar biasa pelik (<em>long-term dependencies</em>) tanpa harus mendestabilisasi arus gradien penyesuaian prediksi algoritmik JST [24] mensyaratkan eksekusi pipa data (<em>data engineering pipeline</em>) yang luar biasa presisi. Tujuan akhir dari rancang BI terpadu ini adalah mengeja ulang output biner gelap hasil JST mentah agar menjelma bahasa matriks risiko interaktif perbankan masa kini.</p>
+
+    <!-- NEW SECTION: CONSTITUENT FRAMEWORK -->
+    <h2>G. Kerangka Pemikiran Penelitian (Conceptual Framework)</h2>
+    <p style="text-align: justify;">
+        Untuk menjawab tantangan dalam riset ini, dirancanglah sebuah alur logis yang menjembatani data historis mentah menuju sistem penunjang keputusan. Kerangka ini bertujuan untuk menjelaskan secara sistematis tahapan pengolahan data menggunakan algoritma <em>Deep Learning</em> hingga menghasilkan metrik <em>Business Intelligence</em> yang siap digunakan secara praktis.
+    </p>
+
+    <!-- STUNNING SVG DIAGRAM START -->
+    <div class="svg-figure" style="margin: 40px 0; font-family: 'Inter', 'Segoe UI', sans-serif;">
+        <img src="../04_Visualizations/Kerangka_Pemikiran_BI.png" alt="Kerangka Pemikiran Penelitian" style="width: 100%; max-width: 850px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #cbd5e1;" />
+        <div class="figure-caption" style="text-align: center; margin-top: 15px; color: #475569; font-size: 10pt;">
+            <strong>Gambar 2.1</strong> Alur Kerangka Pemikiran Riset dari Pemrosesan Algoritma Kuantitatif ke Representasi Visual <em>Business Intelligence</em>.
+        </div>
+    </div>
+    <!-- STUNNING SVG DIAGRAM END -->
+
+    <p style="text-align: justify;">
+        Secara ringkas, kerangka penelitian ini dapat dijelaskan melalui empat tahapan utama:
+    </p>
+    <ol style="text-align: justify; padding-left: 20px;">
+        <li style="margin-bottom: 8px;"><strong>Tahap Pengumpulan Data:</strong> Mengambil dan merekam data harga historis dari pasar secara riil (<em>real-time</em>) dan menambahkan kalkulasi 15 indikator teknikal (seperti pengukuran volatilitas dan momentum pasar).</li>
+        <li style="margin-bottom: 8px;"><strong>Tahap Pemodelan Kecerdasan:</strong> Menggunakan jaringan saraf tiruan (Algoritma LSTM dan GRU) yang kemudian dibandingkan dengan model konvensional (XGBoost). Tahap ini juga mencakup teknik <em>Explainable AI</em> untuk menjelaskan alasan di balik prediksi mesin, bukan sekadar menjadikannya "kotak hitam".</li>
+        <li style="margin-bottom: 8px;"><strong>Tahap Hasil Prediksi:</strong> Mendapatkan angka persentase kemampuan algoritma dalam memprediksi arah tren masa depan (<em>Win Rate</em>) sekaligus menekan rasio kesalahan hitungnya serendah mungkin (RMSE).</li>
+        <li style="margin-bottom: 8px;"><strong>Tahap Dashboard BI:</strong> Mengubah hasil hitungan algoritma yang rumit tersebut menjadi indikator risiko praktis yang sangat mudah dibaca oleh para manajer investasi saat mengambil keputusan.</li>
+    </ol>
+
+    <h2>H. Formulasi Indikator Teknikal dan Penilaian Performa</h2>
+<h3>1. Perhitungan Matematis Tren Linear (MACD & RSI)</h2>
+    <p>Akselerasi cepat mengenai percepatan fluktuasi (*trend reversals*) difasilitasi rumusan hitung eksponensial dalam
+        rumusan *Moving Average Convergence Divergence* (MACD):</p>
+    <div class="equation">
+        $$ MACD = EMA_{12}(P) - EMA_{26}(P) \eqno{(2)} $$
+    </div>
+    <p>Sedangkan untuk merumuskan klasifikasi titik jenuh di mana investasi dirasa sudah terlalu mahal (Overbought) atau
+        terlalu murah (Oversold), indeks diukur ke dalam limit paksa 0 hingga 100 dengan rasio *Relative Strength Index*
+        (RSI):</p>
+    <div class="equation">
+        $$ RSI = 100 - \left(\frac{100}{1 + \frac{EMA(\text{Gain})}{EMA(\text{Loss})}}\right) \eqno{(3)} $$
+    </div>
+
+    <h3>2. Stabilisator Siklus Stasioner Varians (Volatilitas Terukur)</h2>
+    <p>Model neural acapkali kewalahan membaca guncangan tak wajar. Pembatasan lonjakan fluktuasi menggunakan
+        perhitungan Lebar Logaritmik pita deviasi menempatkan perlindungan terhadap batas error berlebih (mempertahankan
+        stasioneritas):</p>
+    <div class="equation">
+        $$ \sigma_t = \sqrt{\frac{1}{n} \sum (\Delta P_i - \bar{P})^2} \eqno{(4)} $$
+    </div>
+
+    <h3>3. Analitika Transparansi Kontribusi Fitur (Koefisien SHAP)</h2>
+    <p>Penggunaan ke-15 deret fitur baru tersebut berpotensi menjebak model ke dalam beban bias (*overloading*). Untuk
+        merangkai *Explainable AI* (Sistem AI yang dapat dijelaskan pola kerjanya), kontribusi bobot metrik tidak
+        dilakukan lewat uji coba tebakan bebas murni, melainkan diuji probabilitasnya menggunakan instrumen <em>SHapley
+            Additive exPlanations (SHAP)</em>. Evaluasi mekanis modul SHAP memastikan dan menjabarkan transparansi;
+        seperti mengungkapkan bahwa sinyal <em>MACD</em> atau deviasi <em>Rolling Volatility</em> memberikan porsi bobot
+        paling relevan selama tahapan prediksi algoritmik berjalan dibandingkan fitur dasar lainnya [25], [26], [27].
+    </p>
+
+        <h2>I. Hipotesis Penelitian</h2>
+    <p style="text-align: justify;">Berdasarkan pemaparan kajian pustaka (<em>State of the Art</em>) dan alur kerangka pemikiran riset, dirumuskan hipotesis utama yang akan diuji dalam penelitian eksperimental ini sebagai berikut:</p>
+    <ol style="text-align: justify; padding-left: 20px; line-height: 1.7;">
+        <li style="margin-bottom: 12px;">
+            <strong>H<sub>1</sub>:</strong> Arsitektur <em>Deep Learning</em> (LSTM dan GRU) memiliki tingkat kesalahan komputasi prediksi nilai (<em>Root Mean Square Error/RMSE</em>) yang secara signifikan lebih rendah dibandingkan model *baseline* konvensional (XGBoost) pada kondisi volatilitas pasar yang tinggi.
+        </li>
+        <li style="margin-bottom: 12px;">
+            <strong>H<sub>2</sub>:</strong> Algoritma LSTM memberikan persentase ketepatan arah masa depan (<em>Win Rate %</em>) yang lebih presisi dibandingkan GRU akibat kemampuannya mempertahankan ingatan pola data jangka panjang (*Long-term temporal dependencies*).
+        </li>
+        <li style="margin-bottom: 12px;">
+            <strong>H<sub>3</sub>:</strong> Penerapan dekoder transparansi mesin <em>Explainable AI</em> (SHAP) secara valid mampu menyingkap persentase kontribusi vital dari tiap parameter indikator teknikal tak linier (seperti MACD dan Volatilitas Harian) tanpa mengurangi akurasi jaringan saraf.
+        </li>
+        <li style="margin-bottom: 12px;">
+            <strong>H<sub>4</sub>:</strong> Terjemahan metrik evaluasi Neural Network (RMSE/Win-Rate) ke dalam kalkulus probabilitas metrik <em>Business Intelligence</em> (seperti minimasi <em>Value at Risk</em> dan maksimasi <em>Sharpe Ratio</em>) terbukti aman dan efektif digunakan sebagai landasan pengambilan keputusan mitigasi risiko investasi secara *real-time*.
+        </li>
+    </ol>
+    <h1>BAB III: ARSITEKTUR SISTEM DAN METODOLOGI BI FRAMEWORK</h1>
+    <p>Agar penelitian ini dapat diuji ulang secara empiris dan akurat (*deterministic reproducibility*), eksekusi seluruh rancang bangun penelitian didefinisikan ke dalam desain metodologi bertahap yang konkret. Pendekatan terstruktur ini menjembatani pergerakan transisi dari pengolahan miliaran data historis mentah hingga mengekstraksi metrik kecerdasan buatan operasional siap pakai [23], [24].</p>
+
+    <h2>A. Alur Tahapan Penelitian Secara Umum</h2>
+    <p style="text-align: justify;">Pelaksanaan penelitian ini disusun ke dalam lima tahapan pokok yang saling berkesinambungan. Diagram alur kerja pada Gambar 3.1 menjabarkan prosedur kerja secara runut: dimulai dari proses pengumpulan data historis, tahap rekayasa fitur perhitungan analitik, pelatihan model prediktif (<em>Deep Learning</em>), pengukuran tingkat keakuratan dan performa, hingga tahapan akhir berupa integrasi hasil prediksi ke dalam visualisasi parameter manajemen risiko pada sebuah <em>Business Intelligence Dashboard</em>.</p>
+    
+    <div class="svg-figure" style="margin: 40px 0; font-family: 'Inter', 'Segoe UI', sans-serif;">
+        <img src="../04_Visualizations/Tahapan_Penelitian_BI.png" alt="Alur Tahapan Penelitian Riset" style="width: 100%; max-width: 850px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #cbd5e1;" />
+        <div class="figure-caption" style="text-align: center; margin-top: 15px; color: #475569; font-size: 10pt;">
+            <strong>Gambar 3.1</strong> Alur Tahapan Metodologi Penelitian yang Mensinergikan Eksperimentasi Algoritma Prediktif Deep Learning menuju Operasionalisasi Dasbor Kecerdasan Bisnis Eksekutif.
+        </div>
+    </div>
+
+    <p style="text-align: justify;">Berdasarkan pijakan alur metodologis tersebut, skema arsitektur operasional pemrosesan *Big Data* dirancang ketat dan didekonstruksi ke dalam struktur siklus arsitektur empat lapisan (*4-Layer BI Framework*). Formulasi kerangka setiap lapisan ini sangat disarankan untuk menjamin penanganan skala komputasi komoditas aset kripto tersebar [17], [28].</p>
+
+    <h2>B. Lapisan 1: Pangkalan Ingestion Data (Source Hub)</h2>
+    <p>Prosedur akuisisi data direncanakan dimulai secara <em>real-time</em> dengan menghubungkan skrip modul
+        <em>Python</em> menuju Endpoint <em>Binance Spot API</em> secara resmi. Data akan dikumpulkan sepanjang
+        jendela pergerakan 5 tahun berturut-turut (meliputi periode bulan Maret 2021 hingga proyeksi simulasi 2026).
+        Diperkirakan sebanyak <strong>±43.786 baris interval waktu (per-jam)</strong> yang menampung poin pergerakan
+        harga Buka, Tertinggi, Terendah, dan Tutup (OHLC) dapat terkumpul. Besarnya estimasi akumulasi baris ini
+        diharapkan memenuhi rukun fundamental <em>Volume</em> dan <em>Velocity</em> di dalam parameter kerangka
+        Big Data [1], [13].</p>
+
+    <h2>C. Lapisan 2: Rekayasa Engine ETL & Normalisasi Matematika</h2>
+    <p>Demi menjaga rukun kejujuran integritas asal data (*Veracity*), data mentah ditransisikan perlahan ke tahap
+        *Extraction, Transformation, and Load (ETL)*. Seluruh cacat angka bolong (*missing values* akibat keterlambatan
+        respon server Binance) ditambal matematis menggunakan strategi *Linear Polynomial Interpolation*. Kemudian,
+        karena input nilai harga kripto merentang luas puluhan ribu nominal mata uang dolar, algoritma pendeteksi di
+        lapisan Neural Networks beresiko mengalami ledakan hitungan *gradient*. Antisipasi diaktifkan dengan melakukan
+        pemampatan batas angka (*Min-Max Normalization*) guna mengecilkan persentase rasio matematis di rentang
+        komputasi skala [0,1]:</p>
+
+    <div class="equation">
+        $$ X_{\text{norm}} = \frac{X - X_{\min}}{X_{\max} - X_{\min}} \eqno{(1)} $$
+    </div>
+
+    <h2>D. Lapisan 3: Komputasi Prediktivitas dan Operasional Node Tersembunyi</h2>
+    <p>Sebagai instrumen kepatuhan kerangka hukum penyesuaian (*Variety* Big Data), data OHLC dimultiplikasi secara
+        formula menjadi total lima belas (15) varian fitur teknikal pelacakan pasar. Seluruh ragam data tersebut
+        kemudian ditugaskan masuk dalam barisan antrean kompilasi mesin pemroses grafis berakselerasi tinggi berbasis
+        inti CUDA (*Hardware GPU Acceleration*). Langkah struktural ini sangat krusial mengingat pelatihan arsitektur
+        Neural Network membutuhkan eksekusi simulasi perulangan waktu berurutan (*Epochs*) dalam matriks dimensi
+        logaritma yang berkapasitas daya sangat besar.</p>
+
+    <h2>E. Lapisan 4: BI Analytics & Platform Keputusan Bisnis</h2>
+    <p>Tahapan puncak operasional ini berfungsi menerjemahkan nilai kuantitatif dari selisih simpangan prediksi (RMSE).
+        Modul penyunting akan mengubah perhitungan murni matematis residu tersebut menjadi parameter dasbor eksekutif
+        *Decision Support System* yang disuplai di kehidupan nyata—seperti kalkulasi persentase probabilitas arah (*Win
+        Rate*), simulasi keamanan modal korporasi (*Sharpe Ratio*), serta peringatan batasan risiko ambang batas
+        tertinggi mitigasi nilai jatuh melalui parameter *Value at Risk* (VaR). Rangkuman desain aliran komprehensif
+        lapisan kerangka ini diuraikan dengan presisi di visualisasi Gambar 3.2.</p>
+
+    <div class="svg-figure">
+        <!-- SVG diagram layer 1-4 -->
+        <img src="../04_Visualizations/Kerangka_Pemikiran_BI.png" alt="Arsitektur 4-Layer BI Framework" style="width: 100%; max-width: 850px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #cbd5e1;" />
+        <div class="figure-caption"><strong>Gambar 3.2</strong> Usulan Komposisi Dimensi 4 Lapisan Kerangka Kerja
+            Intelijensi Bisnis yang Mensinkronkan Mentahan Data API Terhadap Pemenuhan Syarat Asas Kepatuhan 5V Big
+            Data.</div>
+    </div>
+
+    <h1>REKAYASA PARAMETER (FEATURE ENGINEERING) & PERMUTASI SHAP</h1>
+    <p>Penginputan murni dari titik harga historis secara langsung ke dalam jaringan logaritma sering kali membatasi
+        ruang cakupan performa *deep learning*. Untuk memecahkan isolasi nilai nominal tersebut, dilakukan *Feature
+        Engineering* (Rekayasa Fitur). Nilai harga mentah diproyeksikan dan dibelah menjadi lima (5) sub-kategori utama
+        (seperti yang dijabarkan paralel pada Tabel III). Proses transformasi ini menciptakan kekayaan wawasan
+        klasifikasi untuk pelacakan mesin cerdas (*Variety Principle*).</p>
+
+    <div class="table-container">
+        <div class="table-title">Tabel III. Parameter Pelacakan Lima Belas Fitur Tambahan (Prinsip Keberagaman Data)
+        </div>
+        <table>
+            <tr>
+                <th>No</th>
+                <th>Fitur Teknikal / Parameter Analitik</th>
+                <th>Fungsi Observasi</th>
+                <th>Basis Rumusan Matematika</th>
+            </tr>
+            <tr>
+                <td>1-5</td>
+                <td>Open, High, Low, Close, Volume</td>
+                <td>Penentuan Target Base (Raw)</td>
+                <td>\(O_t, H_t, L_t, P_t, V_t\)</td>
+            </tr>
+            <tr>
+                <td>6-7</td>
+                <td>Moving Average-7, MA-21</td>
+                <td>Estimasi Titik Rata-rata Tren</td>
+                <td>\(avg(P_t, n)\)</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Relative Strength Index (RSI)</td>
+                <td>Deteksi Perputaran Momentum</td>
+                <td>Persamaan. (3)</td>
+            </tr>
+            <tr>
+                <td>9-10</td>
+                <td>MACD & Batas Sinyal MACD</td>
+                <td>Kalkulasi Akselerasi Tren</td>
+                <td>Persamaan. (2)</td>
+            </tr>
+            <tr>
+                <td>11-13</td>
+                <td>Bollinger Upper, Lower, Width</td>
+                <td>Dimensi Kurungan Lebar Volatilitas</td>
+                <td>\(MA_{20} \pm 2\sigma\) dan Persamaan. (4)</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Logarithm Returns</td>
+                <td>Harmonisasi Nilai Stasioner</td>
+                <td>\(ln(P_t/P_{t-1})\)</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Rolling Volatility 24-Jam</td>
+                <td>Kuantifikasi Titik Risiko Simpangan</td>
+                <td>\(\sigma_{24h}\)</td>
+            </tr>
+        </table>
+    </div>
+
+    <h1>RENCANA METODOLOGI PELATIHAN DEEP ARCHITECTURE (HYPERPARAMETER)</h1>
+    <p>Risiko terbesar dalam memprediksi komputasi waktu runtut adalah fenomena <em>Data-Leaks</em> (yakni bocornya data
+        pengujian dari kurun waktu masa depan yang tertaut tanpa sengaja ke data pelatihan lampau). Penghancuran celah
+        kesalahan ini dieksekusi menggunakan modul sinkronisasi validasi berantai khusus: <strong>Walk-Forward
+            Validation</strong>. Modus pengujian tumpang-tindih (*sliding window*) ini memastikan model dinilai
+        kemampuannya pada batasan sisa rentang absolut 168 jam ke depan (sepekan), murni menelusuri data yang
+        benar-benar belum pernah terekspos sebelumnya (*Look-ahead Mismatch Prevention*).</p>
+
+    <h2>A. Optimalisasi Kalibrasi Variabel Jaringan (Grid Search)</h2>
+    <p>Untuk menciptakan tatanan persaingan perbandingan model yang seimbang dan adil, diperlukan pencarian pengaturan
+        titik parameter optimal (<em>Hyperparameter Tuning</em>) menggunakan <em>Grid Search Cross-Validation</em>.
+        Ruang pencarian hiperparameter yang direncanakan mencakup variasi jumlah <em>Hidden Layers</em> (1–3 lapis),
+        jumlah unit neuron per lapis (32–128), serta nilai <em>Dropout Rate</em> (0,1–0,3). Pengoptimalisasi
+        <em>Stochastic Gradient Descent</em> berbasis algoritma <em>'Adam'</em> direncanakan digunakan pada laju
+        penyerapan (<em>Learning Rate</em>) yang juga termasuk dalam ruang pencarian [29]. Proses <em>Grid Search</em>
+        ini turut menyematkan mekanisme pencegahan <em>overfitting</em> melalui <em>Dropout</em> dan pembatasan
+        jumlah <em>Epochs</em> dengan <em>Early Stopping</em> [30], [31].</p>
+
+    <h2>B. Penguncian Ambang Batas Logaritma Rujukan (Baseline XGBoost)</h2>
+    <p>Difungsikan sebagai metode rujukan statis komparatif, algoritma susunan <em>Extreme Gradient Boosting
+            (XGBoost)</em> ditempatkan demi membuktikan keunggulan metodologi AI sekuensial. Mesin ini didikte untuk
+        memperhitungkan gabungan kesimpulan lebih dari 100 estimasi pohon probabilitas bercabang <em>(Decision
+            Trees)</em>. Algoritma dasar ini menjamin pembaruan nilai akurasi berulang untuk menderivikasi kesalahan
+        residu murni, kendati tidak dibekali unit ingatan memori pergerakan waktu di masa lalu layaknya topologi LSTM
+        dan GRU.</p>
+
+    <h2>C. Anatomi Gerbang Long Short-Term Memory (LSTM)</h2>
+    <p>Superioritas mendasar arsitektur rekayasa memori matriks kontrol LSTM mempercayakan logaritma penjagaan sinyal
+        propagasi atas instruksi gerbang Masukan <em>(Input - \(i_t\))</em> dan gerbang Penghapus <em>(Forget -
+            \(f_t\))</em>:</p>
+    <div class="equation">
+        $$ f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f) \eqno{(5)} $$
+    </div>
+    <div class="equation">
+        $$ i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i) \eqno{(6)} $$
+    </div>
+    <p>Logika fungsi penahanan blok matematis ini menjamin memori rentang temporal harga tren makro dapat diteruskan
+        sepanjang ratusan perulangan baris ke depan, sambil tetap mempertahankan elastisitas untuk mengabaikan gangguan
+        transaksional (*market-noise*) sesaat di detik tertentu.</p>
+
+    <h2>D. Efisiensi Reduksi Topologi Gated Recurrent Unit (GRU)</h2>
+    <p>Hadir sebagai penyempurnaan evaluatif arsitektur ganda klasik LSTM yang konvensional tebal dan rakus daya
+        komputator, skema evolusi arsitektur GRU menyatukan sekat penyaring parameternya. Peleburan tingkat memori masa
+        lalu direngkuh dan diaktifkan melalui pintu hibrida <em>(Update Gate - \(z_t\))</em> yang merangkai seketika
+        kesatuan proses parameter alokasi temporal masa lalu:</p>
+    <div class="equation">
+        $$ z_t = \sigma(W_z \cdot [h_{t-1}, x_t] + b_z) \eqno{(7)} $$
+    </div>
+    <p>Aglomerasi dari *Update-Gate* tersebut berdampak masif menekan rumitnya siklus alur *Backpropagation through
+        Time*. Mengorbankan ruang dimensi kompleks yang tidak terlalu berpengaruh, langkah *training* iterasi model
+        sekunsial varian algoritma ini diharapkan menjadi jauh lebih gesit, ringkas, dan menghemat waktu kalkulasi tanpa
+        perlu melebarkan tingkat kerugian rasio keakuratan *forecast* secara mutlak.</p>
+
+    <h2 style="text-align:center; text-transform:uppercase;">Daftar Pustaka / References</h2>
+    <div class="references">
+        <p>[1] S. Nakamoto, "Bitcoin: A peer-to-peer electronic cash system," White Paper, Oct. 2008.
+            [Online]. Available: https://bitcoin.org/bitcoin.pdf.</p>
+        <p>[2] S. McNally, J. Roche, and S. Caton, "Predicting the price of Bitcoin using machine
+            learning," in <i>Proc. 26th Euromicro Int. Conf. Parallel Distrib. Netw.-Based Process.
+            (PDP)</i>, Cambridge, UK, 2018, pp. 339–343, doi: 10.1109/PDP2018.2018.00060.</p>
+        <p>[3] S. Lahmiri and S. Bekiros, "Cryptocurrency forecasting with deep learning chaotic neural
+            networks," <i>Chaos Solitons Fractals</i>, vol. 118, pp. 35–40, Jan. 2019, doi:
+            10.1016/j.chaos.2018.11.014.</p>
+        <p>[4] H. Sebastião and P. Godinho, "Forecasting and trading cryptocurrencies with machine
+            learning under changing market conditions," <i>Financ. Innov.</i>, vol. 7, no. 1, p. 3,
+            Jan. 2021, doi: 10.1186/s40854-020-00219-1.</p>
+        <p>[5] A. F. Aysan, E. Demir, G. Gozgor, and C. K. M. Lau, "Effects of the geopolitical risks on Bitcoin returns and volatility," <i>Res. Int. Bus. Finance</i>, vol. 47, pp. 511–518, Jan. 2019, doi: 10.1016/j.ribaf.2018.09.011.</p>
+        <p>[6] S. Ben Nouir and H. Ben Haj Hamida, "How do economic policy uncertainty and geopolitical risk drive Bitcoin volatility?" <i>Res. Int. Bus. Finance</i>, vol. 64, p. 101809, Apr. 2023, doi: 10.1016/j.ribaf.2022.101809.</p>
+        <p>[7] P. Jaquart, D. Dann, and C. Weinhardt, "Short-term bitcoin market prediction via machine
+            learning," <i>J. Finance Data Sci.</i>, vol. 7, pp. 45–66, 2021, doi:
+            10.1016/j.jfds.2021.03.001.</p>
+        <p>[8] M. Mudassir, S. Bennbaia, D. Unal, and M. Hammoudeh, "Time-series forecasting of Bitcoin
+            prices using high-dimensional features: a machine learning approach," <i>Neural Comput.
+            Appl.</i>, vol. 32, pp. 15997–16002, Dec. 2020, doi: 10.1007/s00521-020-04299-w.</p>
+        <p>[9] M. Sewell, "Characterization of financial time series," Research Note RN/11/01, Dept.
+            Comput. Sci., Univ. College London, London, UK, 2011.</p>
+        <p>[10] S. Hochreiter and J. Schmidhuber, "Long short-term memory," <i>Neural Comput.</i>, vol. 9,
+            no. 8, pp. 1735–1780, Nov. 1997, doi: 10.1162/neco.1997.9.8.1735.</p>
+        <p>[11] K. Cho, B. Van Merrienboer, C. Gulcehre, D. Bahdanau, F. Bougares, H. Schwenk, and
+            Y. Bengio, "Learning phrase representations using RNN encoder-decoder for statistical machine
+            translation," in <i>Proc. 2014 Conf. Empir. Methods Nat. Lang. Process. (EMNLP)</i>, Doha,
+            Qatar, Oct. 2014, pp. 1724–1734, doi: 10.3115/v1/D14-1179.</p>
+        <p>[12] P. L. Seabe, C. R. Moutsinga, and E. Pindza, "Forecasting cryptocurrency prices using
+            LSTM, GRU, and bi-directional LSTM: A deep learning approach," <i>Fractal Fract.</i>,
+            vol. 7, no. 2, p. 188, Feb. 2023, doi: 10.3390/fractalfract7020188.</p>
+        <p>[13] T. Fischer and C. Krauss, "Deep learning with long short-term memory networks for
+            financial market predictions," <i>Eur. J. Oper. Res.</i>, vol. 270, no. 2, pp. 654–669,
+            Oct. 2018, doi: 10.1016/j.ejor.2017.11.054.</p>
+        <p>[14] E. F. Fama, "Efficient capital markets: A review of theory and empirical work,"
+            <i>J. Finance</i>, vol. 25, no. 2, pp. 383–417, May 1970, doi: 10.2307/2325486.</p>
+        <p>[15] J. W. Goodell, S. Ben Jabeur, F. Saâdaoui, and M. A. Nasir, "Explainable artificial
+            intelligence modeling to forecast bitcoin prices," <i>Int. Rev. Financ. Anal.</i>, vol. 88,
+            p. 102702, Jul. 2023, doi: 10.1016/j.irfa.2023.102702.</p>
+        <p>[16] S. M. Lundberg and S.-I. Lee, "A unified approach to interpreting model predictions,"
+            in <i>Proc. 31st Adv. Neural Inf. Process. Syst. (NeurIPS)</i>, Long Beach, CA, USA, 2017,
+            pp. 4765–4774.</p>
+        <p>[17] W. Jiang, "Applications of deep learning in stock market prediction: Recent progress,"
+            <i>Expert Syst. Appl.</i>, vol. 184, p. 115537, Dec. 2021, doi:
+            10.1016/j.eswa.2021.115537.</p>
+        <p>[18] A. Akyildirim, A. Goncu, and A. Sensoy, "Prediction of cryptocurrency returns using
+            machine learning," <i>Ann. Oper. Res.</i>, vol. 297, no. 1–2, pp. 3–36, Feb. 2021, doi:
+            10.1007/s10479-020-03575-y.</p>
+        <p>[19] C. Chen, Y. Liu, and N. Xu, "A machine learning based predicting framework for
+            cryptocurrency price," <i>Complexity</i>, vol. 2022, p. 7671696, Jan. 2022, doi:
+            10.1155/2022/7671696.</p>
+        <p>[20] T. Koker and D. Koutmos, "Cryptocurrency trading using machine learning,"
+            <i>J. Risk Financ. Manag.</i>, vol. 13, no. 8, p. 178, Aug. 2020, doi:
+            10.3390/jrfm13080178.</p>
+        <p>[21] R. Patel, S. Bhatt, and K. Kumari, "Predicting future volatility of cryptocurrencies
+            using LSTM and GRU deep learning algorithms," <i>Int. J. Eng. Adv. Technol.</i>,
+            vol. 9, no. 3, pp. 1309–1314, Feb. 2020, doi: 10.35940/ijeat.C5534.029320.</p>
+        <p>[22] T. Chen and C. Guestrin, "XGBoost: A scalable tree boosting system," in <i>Proc. 22nd
+            ACM SIGKDD Int. Conf. Knowl. Discovery Data Mining</i>, San Francisco, CA, USA, Aug. 2016,
+            pp. 785–794, doi: 10.1145/2939672.2939785.</p>
+        <p>[23] I. E. Livieris, E. Pintelas, and P. Pintelas, "A CNN–LSTM model for gold price
+            time-series forecasting," <i>Neural Comput. Appl.</i>, vol. 32, no. 23, pp. 17351–17360,
+            Dec. 2020, doi: 10.1007/s00521-020-04867-x.</p>
+        <p>[24] Y. Bengio, P. Simard, and P. Frasconi, "Learning long-term dependencies with gradient
+            descent is difficult," <i>IEEE Trans. Neural Netw.</i>, vol. 5, no. 2, pp. 157–166, Mar.
+            1994, doi: 10.1109/72.279181.</p>
+        <p>[25] S. Siami-Namini, N. Tavakoli, and A. S. Namin, "A comparison of ARIMA and LSTM in
+            forecasting time series," in <i>Proc. 17th IEEE Int. Conf. Mach. Learn. Appl. (ICMLA)</i>,
+            Orlando, FL, USA, Dec. 2018, pp. 1394–1401, doi: 10.1109/ICMLA.2018.00227.</p>
+        <p>[26] A. Thakkar and K. Chaudhari, "Fusion in stock market prediction: A decade survey on the
+            necessity, recent developments, and potential future directions," <i>Inf. Fusion</i>,
+            vol. 65, pp. 95–107, Jan. 2021, doi: 10.1016/j.inffus.2020.08.019.</p>
+        <p>[27] V. Hassija et al., "Interpreting black-box models: A review on explainable artificial
+            intelligence," <i>Cogn. Comput.</i>, vol. 16, no. 1, pp. 45–74, Jan. 2024, doi:
+            10.1007/s12559-023-10179-8.</p>
+        <p>[28] B. M. Henrique, V. A. Sobreiro, and H. Kimura, "Literature review: Machine learning
+            techniques applied to financial market prediction," <i>Expert Syst. Appl.</i>, vol. 124,
+            pp. 226–251, Jun. 2019, doi: 10.1016/j.eswa.2019.01.012.</p>
+        <p>[29] D. P. Kingma and J. Ba, "Adam: A method for stochastic optimization," in <i>Proc. 3rd
+            Int. Conf. Learn. Represent. (ICLR)</i>, San Diego, CA, USA, 2015, arXiv:1412.6980.</p>
+        <p>[30] N. Srivastava, G. Hinton, A. Krizhevsky, I. Sutskever, and R. Salakhutdinov, "Dropout:
+            A simple way to prevent neural networks from overfitting," <i>J. Mach. Learn. Res.</i>,
+            vol. 15, no. 1, pp. 1929–1958, 2014.</p>
+        <p>[31] A. Graves, "Supervised sequence labelling with recurrent neural networks," in
+            <i>Studies in Computational Intelligence</i>, vol. 385, Berlin, Germany: Springer, 2012,
+            doi: 10.1007/978-3-642-24797-2.</p>
+    </div>
+
+</body>
+
+</html>

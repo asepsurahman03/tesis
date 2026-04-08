@@ -1,0 +1,26 @@
+<h1>BAB I: PENDAHULUAN</h1>
+<h2>1.1 Latar Belakang</h2>
+<h2>1.2 Identifikasi Masalah</h2>
+<h2>1.3 Rumusan Masalah</h2>
+<h2>1.4 Tujuan Penelitian</h2>
+<h2>1.5 Manfaat Penelitian</h2>
+<h2>1.6 Hipotesis Penelitian</h2>
+<h2>1.7 Batasan Penelitian</h2>
+<h2>1.8 Sistematika Penulisan</h2>
+<h1>BAB II: KAJIAN TEORITIS DAN TINJAUAN PUSTAKA</h1>
+<h2>A. Keterbatasan Metodologi Analisis Tradisional</h2>
+<h2>B. Perkembangan Arsitektur Saraf Deep Learning Berbasis Memori</h2>
+<h1>BAB III: ARSITEKTUR SISTEM DAN METODOLOGI BI FRAMEWORK</h1>
+<h2>A. Lapisan 1: Pangkalan Ingestion Data (Source Hub)</h2>
+<h2>B. Lapisan 2: Rekayasa Engine ETL & Normalisasi Matematika</h2>
+<h2>C. Lapisan 3: Komputasi Prediktivitas dan Operasional Node Tersembunyi</h2>
+<h2>D. Lapisan 4: BI Analytics & Platform Keputusan Bisnis</h2>
+<h1>REKAYASA PARAMETER (FEATURE ENGINEERING) & PERMUTASI SHAP</h1>
+<h2>A. Perhitungan Matematis Tren Linear (MACD & RSI)</h2>
+<h2>B. Stabilisator Siklus Stasioner Varians (Volatilitas Terukur)</h2>
+<h2>C. Analitika Transparansi Kontribusi Fitur (Koefisien SHAP)</h2>
+<h1>RENCANA METODOLOGI PELATIHAN DEEP ARCHITECTURE (HYPERPARAMETER)</h1>
+<h2>A. Optimalisasi Kalibrasi Variabel Jaringan (Grid Search)</h2>
+<h2>B. Penguncian Ambang Batas Logaritma Rujukan (Baseline XGBoost)</h2>
+<h2>C. Anatomi Gerbang Long Short-Term Memory (LSTM)</h2>
+<h2>D. Efisiensi Reduksi Topologi Gated Recurrent Unit (GRU)</h2>

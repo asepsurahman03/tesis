@@ -1,0 +1,93 @@
+<svg viewBox="0 0 850 480" xmlns="http://www.w3.org/2000/svg" style="width: 100%; background: linear-gradient(145deg, #f8fafc, #e2e8f0); border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #cbd5e1; font-family: 'Times New Roman', Times, serif;">
+    <defs>
+        <!-- Gradients -->
+        <linearGradient id="gradInput" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#bae6fd"/>
+            <stop offset="100%" stop-color="#e0f2fe"/>
+        </linearGradient>
+        <linearGradient id="gradProcess" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ddd6fe"/>
+            <stop offset="100%" stop-color="#ede9fe"/>
+        </linearGradient>
+        <linearGradient id="gradOutput" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#a7f3d0"/>
+            <stop offset="100%" stop-color="#d1fae5"/>
+        </linearGradient>
+        <linearGradient id="gradBI" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#1e293b"/>
+            <stop offset="100%" stop-color="#0f172a"/>
+        </linearGradient>
+        
+        <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+            <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.08"/>
+        </filter>
+        
+        <marker id="arrowHead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#475569" />
+        </marker>
+    </defs>
+
+    <!-- Teks Judul -->
+    <text x="425" y="45" fill="#0f172a" text-anchor="middle" font-size="20" font-weight="bold" letter-spacing="0.5">KERANGKA PEMIKIRAN PENELITIAN</text>
+    <text x="425" y="65" fill="#475569" text-anchor="middle" font-size="13" font-style="italic">Alur Transformasi Data Historis Menjadi Sistem Penunjang Keputusan</text>
+    
+    <line x1="150" y1="85" x2="700" y2="85" stroke="#cbd5e1" stroke-width="2" />
+
+    <!-- 1. Input Layer -->
+    <rect x="30" y="110" width="220" height="230" rx="12" fill="url(#gradInput)" stroke="#38bdf8" stroke-width="2" filter="url(#shadow)"/>
+    <text x="140" y="145" fill="#0369a1" text-anchor="middle" font-size="15" font-weight="bold">1. PENGUMPULAN DATA</text>
+    
+    <rect x="45" y="165" width="190" height="40" rx="6" fill="#ffffff" stroke="#bae6fd" filter="url(#shadow)"/>
+    <text x="140" y="190" fill="#0f172a" text-anchor="middle" font-size="12" font-weight="bold">Akses API Binance</text>
+    
+    <rect x="45" y="215" width="190" height="40" rx="6" fill="#ffffff" stroke="#bae6fd" filter="url(#shadow)"/>
+    <text x="140" y="240" fill="#0f172a" text-anchor="middle" font-size="12" font-weight="bold">Data Historis 5 Tahun</text>
+
+    <rect x="45" y="265" width="190" height="55" rx="6" fill="#ffffff" stroke="#38bdf8" stroke-dasharray="4" filter="url(#shadow)"/>
+    <text x="140" y="285" fill="#0369a1" text-anchor="middle" font-size="12" font-weight="bold">15 Indikator Teknikal</text>
+    <text x="140" y="303" fill="#475569" text-anchor="middle" font-size="11">(OHLCV, RSI, MACD, Volatilitas)</text>
+
+    <!-- Arrow 1 to 2 -->
+    <path d="M 250 225 L 300 225" stroke="#475569" stroke-width="3" marker-end="url(#arrowHead)"/>
+
+    <!-- 2. Core Engine Layer -->
+    <rect x="315" y="110" width="240" height="230" rx="12" fill="url(#gradProcess)" stroke="#8b5cf6" stroke-width="2" filter="url(#shadow)"/>
+    <text x="435" y="145" fill="#5b21b6" text-anchor="middle" font-size="15" font-weight="bold">2. PEMODELAN KECERDASAN</text>
+
+    <rect x="335" y="165" width="200" height="70" rx="6" fill="#ffffff" stroke="#ddd6fe" filter="url(#shadow)"/>
+    <text x="435" y="185" fill="#5b21b6" text-anchor="middle" font-size="12" font-weight="bold">Komparasi Algoritma</text>
+    <text x="435" y="205" fill="#0f172a" text-anchor="middle" font-size="13" font-weight="bold">LSTM vs GRU vs XGBoost</text>
+    <text x="435" y="222" fill="#475569" text-anchor="middle" font-size="11" font-style="italic">Deep Learning Berbasis Waktu</text>
+
+    <rect x="335" y="245" width="200" height="35" rx="6" fill="#ffffff" stroke="#ddd6fe" filter="url(#shadow)"/>
+    <text x="435" y="267" fill="#0f172a" text-anchor="middle" font-size="12" font-weight="bold">Validasi: Walk-Forward</text>
+
+    <rect x="335" y="290" width="200" height="35" rx="6" fill="#ffffff" stroke="#ddd6fe" filter="url(#shadow)"/>
+    <text x="435" y="312" fill="#0f172a" text-anchor="middle" font-size="12" font-weight="bold">Analisis SHAP (XAI)</text>
+
+    <!-- Arrow 2 to 3 -->
+    <path d="M 555 225 L 605 225" stroke="#475569" stroke-width="3" marker-end="url(#arrowHead)"/>
+
+    <!-- 3. Output Translation -->
+    <rect x="620" y="110" width="200" height="230" rx="12" fill="url(#gradOutput)" stroke="#10b981" stroke-width="2" filter="url(#shadow)"/>
+    <text x="720" y="145" fill="#047857" text-anchor="middle" font-size="15" font-weight="bold">3. HASIL PREDIKSI</text>
+    
+    <rect x="635" y="165" width="170" height="70" rx="6" fill="#ffffff" stroke="#10b981" filter="url(#shadow)"/>
+    <text x="720" y="185" fill="#047857" text-anchor="middle" font-size="12" font-weight="bold">Akurasi Nilai</text>
+    <text x="720" y="210" fill="#0f172a" text-anchor="middle" font-size="18" font-weight="bold">RMSE / MAE</text>
+    <text x="720" y="225" fill="#475569" text-anchor="middle" font-size="11" font-style="italic">Kesalahan Hitung Terendah</text>
+
+    <rect x="635" y="250" width="170" height="70" rx="6" fill="#ffffff" stroke="#10b981" filter="url(#shadow)"/>
+    <text x="720" y="270" fill="#047857" text-anchor="middle" font-size="12" font-weight="bold">Akurasi Arah</text>
+    <text x="720" y="295" fill="#0f172a" text-anchor="middle" font-size="18" font-weight="bold">Win Rate %</text>
+    <text x="720" y="310" fill="#475569" text-anchor="middle" font-size="11" font-style="italic">Peluang Profit Terbesar</text>
+
+    <!-- Bottom Dashboard Layer -->
+    <path d="M 140 340 L 140 370 L 435 370 L 435 390" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="6"/>
+    <path d="M 435 340 L 435 390" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="6"/>
+    <path d="M 720 340 L 720 370 L 435 370" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="6"/>
+    
+    <rect x="235" y="390" width="400" height="60" rx="12" fill="url(#gradBI)" stroke="#fbbf24" stroke-width="2" filter="url(#shadow)"/>
+    <text x="435" y="415" fill="#ffffff" text-anchor="middle" font-size="14" font-weight="bold" letter-spacing="1">4. SISTEM PENUNJANG KEPUTUSAN (BI)</text>
+    <text x="435" y="435" fill="#fef3c7" text-anchor="middle" font-size="12" font-weight="bold">Visualisasi Risiko: Sharpe Ratio &amp; Value at Risk (VaR)</text>
+</svg>

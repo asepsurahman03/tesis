@@ -1,0 +1,25 @@
+<h1>BAB II: KAJIAN TEORITIS DAN TINJAUAN PUSTAKA</h1>
+    <h2>A. Keterbatasan Metodologi Analisis Tradisional</h2>
+    <p>Dalam tataran literatur teori finansial masa lampau, pasar investasi seringkali diasumsikan selalu berada pada
+        kondisi seimbang (<em>Efficient Market Hypothesis/EMH</em>) [15]. Namun, aset seperti cryptocurrency
+        seringkali mengalami kejadian penyimpangan asimetris atau efek pengulangan tren jangka menengah yang tidak masuk
+        akal (<em>Long-Memory effects</em>). Hal inilah yang mengindikasikan ketidakefektifan indikator-indikator regresi
+        sekuensial sederhana pada konteks pasar modern. Menyikapi kebuntuan statistik ini, metode berbasis
+        <em>ensemble machine learning</em> seperti XGBoost rencananya akan dijadikan standar dasar
+        (<em>baseline estimator</em>) dalam riset ini karena daya tahannya yang lebih baik terhadap anomali data
+        ketimbang rumusan statistik konvensional [16].</p>
+
+    <h2>B. Perkembangan Arsitektur Saraf Deep Learning Berbasis Memori</h2>
+    <p>Pendekatan Jaringan Saraf Tiruan konvensional memiliki titik lemah yang fatal saat menangani deret waktu
+        finansial yang sangat panjang, yakni fenomena hilangnya ingatan mesin dalam memproses data (<em>Vanishing Gradient
+        Problem</em>). Untuk menangani hal tersebut, Hochreiter dan Schmidhuber [10] merevolusi pemodelan dengan menciptakan
+        arsitektur <em>Long Short-Term Memory</em> (LSTM). LSTM memiliki kemampuan unik di mana ia dibekali sub-gerbang logika
+        independen yang bertugas menyeleksi memori mana yang patut diingat untuk tren masa depan, dan mana yang patut
+        dilupakan (<em>Information Retention Mechanism</em>). Selanjutnya, Cho dkk. [11] merampingkan kompleksitas arsitektur
+        LSTM tersebut dan menyempurnakannya ke dalam bentuk <em>Gated Recurrent Unit</em> (GRU) yang menjanjikan kecepatan
+        pelatihan yang lebih cepat tanpa mengorbankan akurasi pola. Penerapan kedua algoritma prediktif ini
+        dihipotesiskan mampu memberikan performa unggul [17], [18], dan integrasinya bersama infrastruktur
+        <em>Business Intelligence</em> (BI) korporasi tengah menjadi tonggak inovasi yang akan diteliti lebih mendalam
+        dalam penelitian ini [12], [13].</p>
+
+    
